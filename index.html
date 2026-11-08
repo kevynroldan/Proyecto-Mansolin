@@ -1,0 +1,3530 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ManSys | mansolin</title>
+    <link rel="icon" type="image/png" href="Imagenes/favicon-redondo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="encabezado-principal">
+
+    <!-- Logo visible antes de entrar al panel -->
+
+    <img
+        id="logo-encabezado"
+        src="Imagenes/logo.jpg"
+        alt="Logo de ManSys"
+    >
+
+        <!-- Botón visible después de entrar al panel -->
+
+    <button
+        type="button"
+        id="btn-menu"
+        class="boton-hamburguesa"
+        aria-label="Abrir menú de navegación"
+        aria-haspopup="dialog"
+        aria-controls="menu-lateral"
+        aria-expanded="false"
+        hidden
+    >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </button>
+
+    <h1 id="titulo-encabezado">ManSys</h1>
+
+    </header>
+
+        <!-- Menú lateral del sistema -->
+
+    <dialog
+        id="menu-lateral"
+        class="menu-lateral"
+        aria-labelledby="titulo-menu"
+    >
+        <h2 id="titulo-menu" class="solo-lectores">
+            Menú de navegación de ManSys
+        </h2>
+
+        <!-- Encabezado del menú y datos de ejemplo del usuario -->
+
+        <div class="encabezado-menu">
+
+            <button
+                type="button"
+                id="btn-cerrar-menu"
+                class="boton-cerrar-menu"
+                aria-label="Cerrar menú de navegación"
+            >
+                <span aria-hidden="true">&times;</span>
+            </button>
+
+            <img
+                src="Imagenes/logo.jpg"
+                alt="Logo de ManSys"
+                class="logo-menu"
+            >
+
+            <div class="datos-usuario-menu">
+                <p id="nombre-usuario-menu">
+                    Usuario ejemplo
+                </p>
+
+                <p id="correo-usuario-menu">
+                    ejemplo@gmail.com
+                </p>
+            </div>
+
+            <!-- Datos de sesión: valores iniciales de demostración -->
+
+            <div class="datos-sesion-menu">
+                <p>
+                    Entrada:
+                    <time id="fecha-entrada-menu">
+                        Fecha de ejemplo
+                    </time>
+                </p>
+
+                <p>
+                    Hora actual:
+                    <time id="hora-actual-menu">
+                        Hora de ejemplo
+                    </time>
+                </p>
+
+                <p>
+                    Último inicio de sesión:
+                    <time id="ultimo-inicio-menu">
+                        Fecha y hora de ejemplo
+                    </time>
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Rol del usuario -->
+
+        <div class="rol-menu">
+            <p>
+                Rol:
+                <span id="rol-usuario-menu">Administrativo</span>
+            </p>
+        </div>
+
+        <!-- Opciones de navegación -->
+
+        <nav class="navegacion-menu" aria-label="Opciones del sistema">
+
+            <!-- Gestión -->
+
+            <section
+                class="grupo-menu"
+                aria-labelledby="titulo-gestion-menu"
+            >
+                <h3 id="titulo-gestion-menu">Gestión</h3>
+
+                <ul class="lista-menu">
+                    <li>
+                        <button
+                            type="button"
+                            id="menu-inicio"
+                            class="opcion-menu"
+                            aria-current="page"
+                        >
+                            Bienvenido a Mansolin
+                        </button>
+                    </li>
+
+                    <li>
+                        <button
+                            type="button"
+                            id="menu-crear-orden"
+                            class="opcion-menu"
+                        >
+                            Crear orden de trabajo
+                        </button>
+                    </li>
+
+                    <li>
+                        <button
+                            type="button"
+                            id="menu-buscar-orden"
+                            class="opcion-menu"
+                        >
+                            Buscar orden de trabajo
+                        </button>
+                    </li>
+
+                    <li>
+                        <button
+                            type="button"
+                            id="menu-crear-factura"
+                            class="opcion-menu"
+                        >
+                            Crear factura
+                        </button>
+                    </li>
+
+                    <li>
+                        <button
+                            type="button"
+                            id="menu-buscar-factura"
+                            class="opcion-menu"
+                        >
+                            Buscar factura
+                        </button>
+                    </li>
+
+                    <li>
+                        <button
+                            type="button"
+                            id="menu-crear-cotizacion"
+                            class="opcion-menu"
+                        >
+                            Crear cotización
+                        </button>
+                    </li>
+
+                    <li>
+                        <button
+                            type="button"
+                            id="menu-buscar-cotizacion"
+                            class="opcion-menu"
+                        >
+                            Buscar cotización
+                        </button>
+                    </li>
+
+                    <li>
+                        <button
+                            type="button"
+                            id="menu-crear-cuenta-cobro"
+                            class="opcion-menu"
+                        >
+                            Crear cuenta de cobro
+                        </button>
+                    </li>
+
+                    <li>
+                        <button
+                            type="button"
+                            id="menu-buscar-cuenta-cobro"
+                            class="opcion-menu"
+                        >
+                            Buscar cuenta de cobro
+                        </button>
+                    </li>
+
+                    <li>
+                        <button
+                            type="button"
+                            id="menu-ordenes-trabajo"
+                            class="opcion-menu"
+                        >
+                            Órdenes de trabajo
+                        </button>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Edición demostrativa -->
+
+            <section
+                class="grupo-menu"
+                aria-labelledby="titulo-edicion-menu"
+            >
+                <h3 id="titulo-edicion-menu">Edición demostrativa</h3>
+
+                <ul class="lista-menu">
+                    <li>
+                        <button
+                            type="button"
+                            id="menu-editar-orden"
+                            class="opcion-menu"
+                        >
+                            Editar orden de trabajo
+                        </button>
+                    </li>
+
+                    <li>
+                        <button
+                            type="button"
+                            id="menu-editar-factura"
+                            class="opcion-menu"
+                        >
+                            Editar factura
+                        </button>
+                    </li>
+
+                    <li>
+                        <button
+                            type="button"
+                            id="menu-editar-cotizacion"
+                            class="opcion-menu"
+                        >
+                            Editar cotización
+                        </button>
+                    </li>
+
+                    <li>
+                        <button
+                            type="button"
+                            id="menu-editar-cuenta-cobro"
+                            class="opcion-menu"
+                        >
+                            Editar cuenta de cobro
+                        </button>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Sistema -->
+
+            <section
+                class="grupo-menu"
+                aria-labelledby="titulo-sistema-menu"
+            >
+                <h3 id="titulo-sistema-menu">Sistema</h3>
+
+                <ul class="lista-menu">
+                    <li>
+                        <button
+                            type="button"
+                            id="menu-ajustes"
+                            class="opcion-menu"
+                        >
+                            Ajustes
+                        </button>
+                    </li>
+
+                    <li>
+                        <button
+                            type="button"
+                            id="menu-cerrar-sesion"
+                            class="opcion-menu"
+                        >
+                            Cerrar sesión
+                        </button>
+                    </li>
+                </ul>
+            </section>
+
+        </nav>
+    </dialog>
+
+    <main>
+        <section class="tarjeta-acceso">
+            <h2>MANSOLIN</h2>
+            <p class="descripcion-empresa">
+                Reparación de Herramientas Eléctricas &amp; Soldadores Inverter
+            </p>
+
+            <!-- Opciones de acceso -->
+
+            <div class="opciones-acceso">
+                <button type="button" id="btn-inicio" class="activo">Iniciar Sesión</button>
+                <button type="button" id="btn-registro">Crear cuenta</button>
+                <button type="button" id="btn-consulta">Consulta cliente</button>
+            </div>
+
+            <!-- Pantalla de inicio -->
+
+            <div id="pantalla-inicio" class="pantalla">
+                <button 
+                    type="button" 
+                    id="btn-tipo-usuario" 
+                    class="icono-usuario"
+                    aria-label="seleccionar tu tipo de usuario"
+                    aria-expanded="false"
+                    aria-controls="selector-tipo-usuario"
+                >
+                    <img src="Imagenes/usuario/usuario.svg" alt="" width="64" height="64">
+                </button>
+
+                <p class="indicacion-acceso">
+                    Selecciona tu tipo de acceso<span
+                        class="asterisco-obligatorio"
+                        aria-hidden="true"
+                    >*</span>
+                </p>
+                
+                <form
+                    id="formulario-inicio"
+                    class="formulario-validable"
+                    novalidate
+                >
+                    <div
+                        class="campo-perfil"
+                        id="selector-tipo-usuario"
+                        hidden
+                    >
+                        <label for="tipo-usuario">
+                            Perfil<span class="asterisco-obligatorio" aria-hidden="true">*</span>
+                        </label>
+
+                        <div class="entrada-validable">
+                            <select
+                                id="tipo-usuario"
+                                name="tipo-usuario"
+                                aria-describedby="error-tipo-usuario ayuda-tipo-usuario"
+                                required
+                            >
+                                <option value="" disabled selected>Selecciona tu perfil</option>
+                                <option value="administrador">Administrador</option>
+                                <option value="recepcionista">Recepcionista</option>
+                                <option value="tecnico">Técnico</option>
+                            </select>
+
+                            <button
+                                class="boton-ayuda-acceso"
+                                type="button"
+                                data-ayuda-campo="tipo-usuario"
+                                aria-label="Mostrar ayuda del perfil"
+                                aria-controls="ayuda-tipo-usuario"
+                                aria-expanded="false"
+                                hidden
+                            >!</button>
+                        </div>
+
+                        <p
+                            class="error-acceso"
+                            id="error-tipo-usuario"
+                            aria-live="polite"
+                            hidden
+                        ></p>
+
+                        <p class="ayuda-acceso" id="ayuda-tipo-usuario" hidden>
+                            Selecciona el perfil asignado a tu cuenta:
+                            Administrador, Recepcionista o Técnico.
+                        </p>
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="usuario">
+                            Usuario<span class="asterisco-obligatorio" aria-hidden="true">*</span>
+                        </label>
+
+                        <div class="entrada-validable">
+                            <img
+                                class="icono-campo"
+                                src="Imagenes/usuario/usuario.svg"
+                                alt=""
+                                width="24"
+                                height="24"
+                            >
+
+                            <input
+                                type="text"
+                                id="usuario"
+                                name="usuario"
+                                placeholder="Escribe tu usuario"
+                                autocomplete="username"
+                                autocapitalize="none"
+                                spellcheck="false"
+                                aria-describedby="error-usuario ayuda-usuario"
+                                required
+                            >
+
+                            <button
+                                class="boton-ayuda-acceso"
+                                type="button"
+                                data-ayuda-campo="usuario"
+                                aria-label="Mostrar ayuda del usuario"
+                                aria-controls="ayuda-usuario"
+                                aria-expanded="false"
+                                hidden
+                            >!</button>
+                        </div>
+
+                        <p
+                            class="error-acceso"
+                            id="error-usuario"
+                            aria-live="polite"
+                            hidden
+                        ></p>
+
+                        <p class="ayuda-acceso" id="ayuda-usuario" hidden>
+                            Usa letras, números, punto, guion o guion bajo,
+                            sin espacios. Incluye al menos una letra o número.
+                            Ejemplo: adriana.guzman
+                        </p>
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="contrasena">
+                            Contraseña<span class="asterisco-obligatorio" aria-hidden="true">*</span>
+                        </label>
+
+                        <div class="entrada-validable">
+                            <img
+                                class="icono-campo"
+                                src="Imagenes/candado/candado.svg"
+                                alt=""
+                                width="24"
+                                height="24"
+                            >
+
+                            <input
+                                type="password"
+                                id="contrasena"
+                                name="contrasena"
+                                placeholder="Escribe tu contraseña"
+                                autocomplete="current-password"
+                                aria-describedby="error-contrasena ayuda-contrasena"
+                                required
+                            >
+
+                            <button
+                                class="boton-ayuda-acceso"
+                                type="button"
+                                data-ayuda-campo="contrasena"
+                                aria-label="Mostrar ayuda de la contraseña"
+                                aria-controls="ayuda-contrasena"
+                                aria-expanded="false"
+                                hidden
+                            >!</button>
+                        </div>
+
+                        <p
+                            class="error-acceso"
+                            id="error-contrasena"
+                            aria-live="polite"
+                            hidden
+                        ></p>
+
+                        <p class="ayuda-acceso" id="ayuda-contrasena" hidden>
+                            Escribe exactamente la contraseña de tu cuenta.
+                            Respeta las mayúsculas, minúsculas, espacios y signos.
+                        </p>
+                    </div>
+
+                    <p class="nota-obligatorios">
+                        El
+                        <span class="asterisco-obligatorio" aria-hidden="true">*</span>
+                        indica un campo obligatorio.
+                    </p>
+
+                    <div class="opciones-contrasena">
+                        <button
+                            class="enlace-recuperar"
+                            id="btn-recuperar"
+                            type="button"
+                        >
+                            Olvidé mi contraseña
+                        </button>
+                    </div>
+
+                    <button class="boton-principal" type="submit">
+                        Iniciar sesión
+                    </button>
+                </form>
+            </div>
+
+            <div id="pantalla-registro" class="pantalla" hidden>
+                <form
+                    id="formulario-registro"
+                    class="formulario-validable"
+                    novalidate
+                >
+                    <div class="campo-perfil">
+                        <label for="perfil-registro">
+                            Perfil<span class="asterisco-obligatorio" aria-hidden="true">*</span>
+                        </label>
+
+                        <div class="entrada-validable">
+                            <select
+                                id="perfil-registro"
+                                name="perfil-registro"
+                                aria-describedby="error-perfil-registro ayuda-perfil-registro"
+                                required
+                            >
+                                <option value="" disabled selected>Selecciona tu perfil</option>
+                                <option value="administrador">Administrador</option>
+                                <option value="recepcionista">Recepcionista</option>
+                                <option value="tecnico">Técnico</option>
+                            </select>
+
+                            <button
+                                class="boton-ayuda-acceso"
+                                type="button"
+                                data-ayuda-campo="perfil-registro"
+                                aria-label="Mostrar ayuda del perfil"
+                                aria-controls="ayuda-perfil-registro"
+                                aria-expanded="false"
+                                hidden
+                            >!</button>
+                        </div>
+
+                        <p class="error-acceso" id="error-perfil-registro"
+                            aria-live="polite" hidden></p>
+
+                        <p class="ayuda-acceso" id="ayuda-perfil-registro" hidden>
+                            Selecciona el cargo asignado a tu cuenta:
+                            Administrador, Recepcionista o Técnico.
+                        </p>
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="nombres-registro">
+                            Nombres<span class="asterisco-obligatorio" aria-hidden="true">*</span>
+                        </label>
+
+                        <div class="entrada-validable">
+                            <input
+                                type="text"
+                                id="nombres-registro"
+                                name="nombres"
+                                placeholder="María José"
+                                autocomplete="given-name"
+                                aria-describedby="error-nombres-registro ayuda-nombres-registro"
+                                required
+                            >
+
+                            <button
+                                class="boton-ayuda-acceso"
+                                type="button"
+                                data-ayuda-campo="nombres-registro"
+                                aria-label="Mostrar ayuda de nombres"
+                                aria-controls="ayuda-nombres-registro"
+                                aria-expanded="false"
+                                hidden
+                            >!</button>
+                        </div>
+
+                        <p class="error-acceso" id="error-nombres-registro"
+                            aria-live="polite" hidden></p>
+
+                        <p class="ayuda-acceso" id="ayuda-nombres-registro" hidden>
+                            Escribe únicamente letras y espacios. Se permiten tildes,
+                            ñ y diéresis. No uses números, guiones, comas ni otros signos.
+                        </p>
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="apellidos-registro">
+                            Apellidos<span class="asterisco-obligatorio" aria-hidden="true">*</span>
+                        </label>
+
+                        <div class="entrada-validable">
+                            <input
+                                type="text"
+                                id="apellidos-registro"
+                                name="apellidos"
+                                placeholder="Pérez Gómez"
+                                autocomplete="family-name"
+                                aria-describedby="error-apellidos-registro ayuda-apellidos-registro"
+                                required
+                            >
+
+                            <button
+                                class="boton-ayuda-acceso"
+                                type="button"
+                                data-ayuda-campo="apellidos-registro"
+                                aria-label="Mostrar ayuda de apellidos"
+                                aria-controls="ayuda-apellidos-registro"
+                                aria-expanded="false"
+                                hidden
+                            >!</button>
+                        </div>
+
+                        <p class="error-acceso" id="error-apellidos-registro"
+                            aria-live="polite" hidden></p>
+
+                        <p class="ayuda-acceso" id="ayuda-apellidos-registro" hidden>
+                            Escribe únicamente letras y espacios. Se permiten tildes,
+                            ñ y diéresis. No uses números, guiones, comas ni otros signos.
+                        </p>
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="documento-registro">
+                            Cédula<span class="asterisco-obligatorio" aria-hidden="true">*</span>
+                        </label>
+
+                        <div class="entrada-validable">
+                            <input
+                                type="text"
+                                id="documento-registro"
+                                name="documento"
+                                placeholder="1234567890"
+                                inputmode="numeric"
+                                autocomplete="off"
+                                aria-describedby="error-documento-registro ayuda-documento-registro"
+                                required
+                            >
+
+                            <button
+                                class="boton-ayuda-acceso"
+                                type="button"
+                                data-ayuda-campo="documento-registro"
+                                aria-label="Mostrar ayuda de la cédula"
+                                aria-controls="ayuda-documento-registro"
+                                aria-expanded="false"
+                                hidden
+                            >!</button>
+                        </div>
+
+                        <p class="error-acceso" id="error-documento-registro"
+                            aria-live="polite" hidden></p>
+
+                        <p class="ayuda-acceso" id="ayuda-documento-registro" hidden>
+                            Escribe tu cédula usando solo números,
+                            sin puntos, espacios, guiones ni letras.
+                        </p>
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="celular-registro">
+                            Celular<span class="asterisco-obligatorio" aria-hidden="true">*</span>
+                        </label>
+
+                        <div class="entrada-validable">
+                            <input
+                                type="tel"
+                                id="celular-registro"
+                                name="celular"
+                                placeholder="+573001234567"
+                                autocomplete="tel"
+                                aria-describedby="error-celular-registro ayuda-celular-registro"
+                                required
+                            >
+
+                            <button
+                                class="boton-ayuda-acceso"
+                                type="button"
+                                data-ayuda-campo="celular-registro"
+                                aria-label="Mostrar ayuda del celular"
+                                aria-controls="ayuda-celular-registro"
+                                aria-expanded="false"
+                                hidden
+                            >!</button>
+                        </div>
+
+                        <p class="error-acceso" id="error-celular-registro"
+                            aria-live="polite" hidden></p>
+
+                        <p class="ayuda-acceso" id="ayuda-celular-registro" hidden>
+                            Usa solo números. Puedes agregar un signo + al principio
+                            para el indicativo internacional. No uses espacios,
+                            guiones, paréntesis ni letras.
+                        </p>
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="correo-registro">
+                            Correo electrónico<span class="asterisco-obligatorio" aria-hidden="true">*</span>
+                        </label>
+
+                        <div class="entrada-validable">
+                            <input
+                                type="email"
+                                id="correo-registro"
+                                name="correo"
+                                placeholder="ejemplo@correo.com"
+                                autocomplete="email"
+                                autocapitalize="none"
+                                spellcheck="false"
+                                aria-describedby="error-correo-registro ayuda-correo-registro"
+                                required
+                            >
+
+                            <button
+                                class="boton-ayuda-acceso"
+                                type="button"
+                                data-ayuda-campo="correo-registro"
+                                aria-label="Mostrar ayuda del correo"
+                                aria-controls="ayuda-correo-registro"
+                                aria-expanded="false"
+                                hidden
+                            >!</button>
+                        </div>
+
+                        <p class="error-acceso" id="error-correo-registro"
+                            aria-live="polite" hidden></p>
+
+                        <p class="ayuda-acceso" id="ayuda-correo-registro" hidden>
+                            Escribe una dirección de correo válida, sin espacios,
+                            con el nombre de usuario, @ y el dominio.
+                            Ejemplo: ejemplo@correo.com.
+                        </p>
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="contrasena-registro">
+                            Contraseña<span class="asterisco-obligatorio" aria-hidden="true">*</span>
+                        </label>
+
+                        <div class="entrada-validable">
+                            <input
+                                type="password"
+                                id="contrasena-registro"
+                                name="contrasena"
+                                placeholder="Crea tu contraseña"
+                                autocomplete="new-password"
+                                aria-describedby="error-contrasena-registro ayuda-contrasena-registro"
+                                required
+                            >
+
+                            <button
+                                class="boton-ayuda-acceso"
+                                type="button"
+                                data-ayuda-campo="contrasena-registro"
+                                aria-label="Mostrar ayuda de la contraseña"
+                                aria-controls="ayuda-contrasena-registro"
+                                aria-expanded="false"
+                                hidden
+                            >!</button>
+                        </div>
+
+                        <p class="error-acceso" id="error-contrasena-registro"
+                            aria-live="polite" hidden></p>
+
+                        <p class="ayuda-acceso" id="ayuda-contrasena-registro" hidden>
+                            Usa entre 15 y 128 caracteres. Puedes incluir letras,
+                            números, espacios y signos, sin combinaciones obligatorias.
+                            Evita contraseñas comunes o utilizadas en otras cuentas.
+                        </p>
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="repita-contrasena-registro">
+                            Repite la contraseña<span class="asterisco-obligatorio" aria-hidden="true">*</span>
+                        </label>
+
+                        <div class="entrada-validable">
+                            <input
+                                type="password"
+                                id="repita-contrasena-registro"
+                                name="repita-contrasena"
+                                placeholder="Repite tu contraseña"
+                                autocomplete="new-password"
+                                aria-describedby="error-repita-contrasena-registro ayuda-repita-contrasena-registro"
+                                required
+                            >
+
+                            <button
+                                class="boton-ayuda-acceso"
+                                type="button"
+                                data-ayuda-campo="repita-contrasena-registro"
+                                aria-label="Mostrar ayuda para repetir la contraseña"
+                                aria-controls="ayuda-repita-contrasena-registro"
+                                aria-expanded="false"
+                                hidden
+                            >!</button>
+                        </div>
+
+                        <p class="error-acceso" id="error-repita-contrasena-registro"
+                            aria-live="polite" hidden></p>
+
+                        <p class="ayuda-acceso" id="ayuda-repita-contrasena-registro" hidden>
+                            Repite exactamente la contraseña anterior,
+                            incluidos sus espacios, mayúsculas y signos.
+                        </p>
+                    </div>
+
+                    <p class="nota-obligatorios">
+                        El
+                        <span class="asterisco-obligatorio" aria-hidden="true">*</span>
+                        indica un campo obligatorio.
+                    </p>
+
+                    <p
+                        class="ayuda-acceso"
+                        id="mensaje-registro"
+                        role="status"
+                        hidden
+                    >
+                        Los campos cumplen las reglas del formulario.
+                        La cuenta todavía no se ha creado: falta conectar
+                        el servidor y la base de datos.
+                    </p>
+
+                    <button class="boton-principal" type="submit">
+                        Registrarse
+                    </button>
+                </form>
+            </div>
+
+            <!-- Pantalla de consulta -->
+
+            <div id="pantalla-consulta" class="pantalla" hidden>
+                <p class="indicacion-consulta">
+                    Ingrese su número de Orden de Trabajo (O.T.) para consultar
+                    el estado en tiempo real de su equipo en Mansolin
+                </p>   
+                
+                <form id="formulario-consulta">
+                        <label for="numero-ot">Número de O.T.</label>
+
+                        <input 
+                            type="text" 
+                            id="numero-ot" 
+                            name="numero-ot" 
+                            placeholder="Ej. 1026"
+                            required
+                        >
+
+                    <button type="submit" class="boton-principal">
+                        Consultar Estado de Reparación
+                    </button>
+                </form>
+
+                <!-- Resultados de la consulta -->  
+
+                <div id="resultado-consulta" hidden>
+                    <h2>Estado de su equipo</h2>
+
+                    <p id="mensaje-consulta"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pantalla de recuperación de contraseña -->
+
+        <section id="pantalla-recuperar" class="pantalla" hidden>
+            <img
+                src="Imagenes/logo.jpg"
+                alt="Logo de ManSys"
+                class="logo-recuperacion"
+            >
+
+            <div class="tarjeta-recuperacion">
+                <h2>Recuperar contraseña</h2>
+            
+                <form id="formulario-recuperar">
+                    <div class="campo-recuperacion">
+                        <label for="correo-recuperar">Correo electrónico</label>
+
+                        <input 
+                            type="email" 
+                            id="correo-recuperar" 
+                            name="correo" 
+                            placeholder="ejemplo@email.com"
+                            autocomplete="email"
+                            required
+                        >
+                    </div>
+
+                    <button type="submit" class="boton-principal">
+                        Enviar enlace de recuperación
+                    </button>
+                </form>
+            </div>
+            <button 
+                type="button" 
+                id="btn-volver-inicio" 
+                class="boton-principal"
+            >
+                Volver a iniciar sesión
+            </button>   
+        </section>
+
+        <!-- Pantalla Restablecer Contraseña -->
+
+        <section id="pantalla-restablecer" class="pantalla" hidden>
+            <img
+                src="Imagenes/logo.jpg"
+                alt="Logo de ManSys"
+                class="logo-recuperacion"
+            >
+
+            <div class="tarjeta-recuperacion">
+                <h2>Crear nueva contraseña</h2>
+
+                <p class="indicacion-restablecer">
+                    Escribe tu nueva contraseña y repítela para confirmarla.
+                </p>
+
+                <form id="formulario-restablecer">
+                    <div class="campo-recuperacion">
+                        <label for="nueva-contrasena">Nueva contraseña</label>
+
+                        <input 
+                            type="password" 
+                            id="nueva-contrasena" 
+                            name="nueva-contrasena" 
+                            placeholder="Escribe tu nueva contraseña"
+                            autocomplete="new-password"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo-recuperacion">
+                        <label for="confirmar-nueva-contrasena">
+                            Repite la nueva contraseña
+                        </label>
+
+                        <input 
+                            type="password" 
+                            id="confirmar-nueva-contrasena" 
+                            name="confirmar-nueva-contrasena" 
+                            placeholder="Repite tu nueva contraseña"
+                            autocomplete="new-password"
+                            required
+                        >
+                    </div>
+
+                    <button type="submit" class="boton-principal">
+                        Guardar nueva contraseña
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Panel principal del sistema -->
+
+        <section id="pantalla-panel" class="pantalla" hidden>
+            <div class="bienvenida-panel">
+                <img 
+                    src="Imagenes/logo.jpg" 
+                    alt="logo de ManSys" 
+                    class="logo-panel"
+                >
+
+                <h2>Bienvenido a Mansolin</h2>
+            </div>
+
+            <div class="opciones-panel">
+                <button
+                    type="button" 
+                    id="btn-crear-orden" 
+                    class="opcion-panel"
+                >
+                    <span class="icono-panel" aria-hidden="true">
+                    <img
+                        src="Imagenes/crear-orden/crear-orden.svg"
+                        alt=""
+                        width="48"
+                        height="48"
+                    >
+                    </span>
+                    <span class="texto-opcion-panel">Crear orden</span>
+                </button>
+
+                <button
+                    type="button"
+                    id="btn-buscar-orden"
+                    class="opcion-panel"
+                >
+                    <span class="icono-panel" aria-hidden="true">
+                    <img
+                        src="Imagenes/buscar-orden/buscar-orden.svg"
+                        alt=""
+                        width="48"
+                        height="48"
+                    >
+                    </span>
+                    <span class="texto-opcion-panel">Buscar orden</span>
+                </button>
+
+                <button
+                    type="button"
+                    id="btn-crear-factura"
+                    class="opcion-panel"
+                >
+                    <span class="icono-panel" aria-hidden="true">
+                    <img
+                        src="Imagenes/crear-factura/crear-factura.svg"
+                        alt=""
+                        width="48"
+                        height="48"
+                    >
+                    </span>
+                    <span class="texto-opcion-panel">Crear factura</span>
+                </button>
+
+                <button
+                    type="button"
+                    id="btn-buscar-factura"
+                    class="opcion-panel"
+                >
+                    <span class="icono-panel" aria-hidden="true">
+                    <img
+                        src="Imagenes/buscar-factura/buscar-factura.svg"
+                        alt=""
+                        width="48"
+                        height="48"
+                    >
+                    </span>
+                    <span class="texto-opcion-panel">Buscar factura</span>
+                </button>
+
+                <button
+                    type="button"
+                    id="btn-crear-cotizacion"
+                    class="opcion-panel"
+                >
+                    <span class="icono-panel" aria-hidden="true">
+                    <img
+                        src="Imagenes/crear-cotizacion/crear-cotizacion.svg"
+                        alt=""
+                        width="48"
+                        height="48"
+                    >
+                    </span>
+                    <span class="texto-opcion-panel">Crear cotización</span>
+                </button>
+
+                <button
+                    type="button"
+                    id="btn-buscar-cotizacion"
+                    class="opcion-panel"
+                >
+                    <span class="icono-panel" aria-hidden="true">
+                    <img
+                        src="Imagenes/buscar-cotizacion/buscar-cotizacion.svg"
+                        alt=""
+                        width="48"
+                        height="48"
+                    >
+                    </span>
+                    <span class="texto-opcion-panel">Buscar cotización</span>
+                </button>
+
+                <button
+                    type="button"
+                    id="btn-crear-cuenta-cobro"
+                    class="opcion-panel"
+                >
+                    <span class="icono-panel" aria-hidden="true">
+                    <img
+                        src="Imagenes/crear-cuenta-cobro/crear-cuenta-cobro.svg"
+                        alt=""
+                        width="48"
+                        height="48"
+                    >
+                    </span>
+                    <span class="texto-opcion-panel">Crear cuenta de cobro</span>
+                </button>
+
+                <button
+                    type="button"
+                    id="btn-buscar-cuenta-cobro"
+                    class="opcion-panel"
+                >
+                    <span class="icono-panel" aria-hidden="true">
+                    <img
+                        src="Imagenes/buscar-cuenta-cobro/buscar-cuenta-cobro.svg"
+                        alt=""
+                        width="48"
+                        height="48"
+                    >
+                    </span>
+                    <span class="texto-opcion-panel">Buscar cuenta de cobro</span>
+                </button>
+
+                <button
+                    type="button"
+                    id="btn-ordenes-trabajo"
+                    class="opcion-panel"
+                >
+                    <span class="icono-panel" aria-hidden="true">
+                    <img
+                        src="Imagenes/ordenes-trabajo/ordenes-trabajo.svg"
+                        alt=""
+                        width="48"
+                        height="48"
+                    >
+                    </span>
+                    <span class="texto-opcion-panel">Órdenes de trabajo</span>
+                </button>
+            </div>
+        </section>
+        
+        <!-- Pantalla de creación de órdenes de trabajo -->
+
+        <section
+            class="pantalla"
+            id="pantalla-crear-orden"
+            aria-labelledby="titulo-crear-orden"
+            hidden
+        >
+            <div class="encabezado-orden">
+                <img
+                    class="logo-orden"
+                    src="Imagenes/logo.jpg"
+                    alt=""
+                    width="64"
+                    height="64"
+                >
+
+                <h2 id="titulo-crear-orden">
+                    Crear orden de trabajo
+                </h2>
+            </div>
+
+            <form
+                class="formulario-validable tarjetas-orden"
+                id="formulario-orden"
+                novalidate
+            >
+                <!-- Tarjeta izquierda: cliente y equipo -->
+
+                <section
+                    class="tarjeta-orden tarjeta-datos-orden"
+                    aria-labelledby="titulo-datos-orden"
+                >
+                    <h3 class="solo-lectores" id="titulo-datos-orden">
+                        Datos del cliente y del equipo
+                    </h3>
+
+                    <div class="campos-orden">
+                        <!-- Datos automáticos de la orden -->
+
+                        <div class="campo-orden">
+                            <label for="fecha-orden">Fecha</label>
+
+                            <input
+                                type="date"
+                                id="fecha-orden"
+                                name="fecha"
+                                readonly
+                            >
+                        </div>
+
+                        <div class="campo-orden">
+                            <label for="numero-orden">N.º orden</label>
+
+                            <input
+                                type="text"
+                                id="numero-orden"
+                                name="numero"
+                                readonly
+                            >
+                        </div>
+
+                        <!-- Cliente -->
+
+                        <div class="campo-orden">
+                            <label for="cliente-orden">
+                                Cliente<span
+                                    class="asterisco-obligatorio"
+                                    aria-hidden="true"
+                                >*</span>
+                            </label>
+
+                            <div class="entrada-validable">
+                                <input
+                                    type="text"
+                                    id="cliente-orden"
+                                    name="cliente"
+                                    autocomplete="off"
+                                    aria-describedby="error-cliente-orden ayuda-cliente-orden"
+                                    required
+                                >
+
+                                <button
+                                    class="boton-ayuda-acceso"
+                                    type="button"
+                                    data-ayuda-campo="cliente-orden"
+                                    aria-label="Mostrar ayuda del cliente"
+                                    aria-controls="ayuda-cliente-orden"
+                                    aria-expanded="false"
+                                    hidden
+                                >!</button>
+                            </div>
+
+                            <p
+                                class="error-acceso"
+                                id="error-cliente-orden"
+                                aria-live="polite"
+                                hidden
+                            ></p>
+
+                            <p class="ayuda-acceso" id="ayuda-cliente-orden" hidden>
+                                Escribe el nombre completo del cliente
+                                o la razón social de la empresa.
+                            </p>
+                        </div>
+
+                        <!-- Documento del cliente -->
+
+                        <div class="campo-orden">
+                            <label for="documento-cliente-orden">
+                                Cédula o NIT<span
+                                    class="asterisco-obligatorio"
+                                    aria-hidden="true"
+                                >*</span>
+                            </label>
+
+                            <div class="entrada-validable">
+                                <input
+                                    type="text"
+                                    id="documento-cliente-orden"
+                                    name="documento-cliente"
+                                    autocomplete="off"
+                                    aria-describedby="error-documento-cliente-orden ayuda-documento-cliente-orden"
+                                    required
+                                >
+
+                                <button
+                                    class="boton-ayuda-acceso"
+                                    type="button"
+                                    data-ayuda-campo="documento-cliente-orden"
+                                    aria-label="Mostrar ayuda del documento del cliente"
+                                    aria-controls="ayuda-documento-cliente-orden"
+                                    aria-expanded="false"
+                                    hidden
+                                >!</button>
+                            </div>
+
+                            <p
+                                class="error-acceso"
+                                id="error-documento-cliente-orden"
+                                aria-live="polite"
+                                hidden
+                            ></p>
+
+                            <p
+                                class="ayuda-acceso"
+                                id="ayuda-documento-cliente-orden"
+                                hidden
+                            >
+                                Escribe la cédula sin puntos ni espacios.
+                                Para un NIT, puedes separar el dígito
+                                de verificación con un guion.
+                            </p>
+                        </div>
+
+                        <!-- Dirección -->
+
+                        <div class="campo-orden">
+                            <label for="direccion-orden">Dirección</label>
+
+                            <div class="entrada-validable">
+                                <input
+                                    type="text"
+                                    id="direccion-orden"
+                                    name="direccion"
+                                    autocomplete="off"
+                                    aria-describedby="error-direccion-orden ayuda-direccion-orden"
+                                >
+
+                                <button
+                                    class="boton-ayuda-acceso"
+                                    type="button"
+                                    data-ayuda-campo="direccion-orden"
+                                    aria-label="Mostrar ayuda de la dirección"
+                                    aria-controls="ayuda-direccion-orden"
+                                    aria-expanded="false"
+                                    hidden
+                                >!</button>
+                            </div>
+
+                            <p
+                                class="error-acceso"
+                                id="error-direccion-orden"
+                                aria-live="polite"
+                                hidden
+                            ></p>
+
+                            <p class="ayuda-acceso" id="ayuda-direccion-orden" hidden>
+                                Escribe la dirección del cliente. Puedes incluir
+                                letras, números y signos propios de una dirección,
+                                como #, guion y punto.
+                            </p>
+                        </div>
+
+                        <!-- Teléfono -->
+
+                        <div class="campo-orden">
+                            <label for="telefono-orden">
+                                Teléfono<span
+                                    class="asterisco-obligatorio"
+                                    aria-hidden="true"
+                                >*</span>
+                            </label>
+
+                            <div class="entrada-validable">
+                                <input
+                                    type="tel"
+                                    id="telefono-orden"
+                                    name="telefono"
+                                    autocomplete="off"
+                                    aria-describedby="error-telefono-orden ayuda-telefono-orden"
+                                    required
+                                >
+
+                                <button
+                                    class="boton-ayuda-acceso"
+                                    type="button"
+                                    data-ayuda-campo="telefono-orden"
+                                    aria-label="Mostrar ayuda del teléfono"
+                                    aria-controls="ayuda-telefono-orden"
+                                    aria-expanded="false"
+                                    hidden
+                                >!</button>
+                            </div>
+
+                            <p
+                                class="error-acceso"
+                                id="error-telefono-orden"
+                                aria-live="polite"
+                                hidden
+                            ></p>
+
+                            <p class="ayuda-acceso" id="ayuda-telefono-orden" hidden>
+                                Escribe el teléfono de contacto usando números.
+                                Puedes agregar un + al principio para el
+                                indicativo internacional.
+                            </p>
+                        </div>
+
+                        <!-- Equipo -->
+
+                        <div class="campo-orden campo-orden-completo">
+                            <label for="equipo-orden">
+                                Equipo<span
+                                    class="asterisco-obligatorio"
+                                    aria-hidden="true"
+                                >*</span>
+                            </label>
+
+                            <div class="entrada-validable">
+                                <input
+                                    type="text"
+                                    id="equipo-orden"
+                                    name="equipo"
+                                    aria-describedby="error-equipo-orden ayuda-equipo-orden"
+                                    required
+                                >
+
+                                <button
+                                    class="boton-ayuda-acceso"
+                                    type="button"
+                                    data-ayuda-campo="equipo-orden"
+                                    aria-label="Mostrar ayuda del equipo"
+                                    aria-controls="ayuda-equipo-orden"
+                                    aria-expanded="false"
+                                    hidden
+                                >!</button>
+                            </div>
+
+                            <p
+                                class="error-acceso"
+                                id="error-equipo-orden"
+                                aria-live="polite"
+                                hidden
+                            ></p>
+
+                            <p class="ayuda-acceso" id="ayuda-equipo-orden" hidden>
+                                Indica el tipo de herramienta, la marca y,
+                                si lo conoces, el modelo.
+                                Ejemplo: Taladro Bosch GSB 13 RE.
+                            </p>
+                        </div>
+
+                        <!-- Síntoma informado al recibir la herramienta -->
+
+                        <div class="campo-orden campo-orden-completo">
+                            <label for="sintoma-orden">
+                                Síntoma<span
+                                    class="asterisco-obligatorio"
+                                    aria-hidden="true"
+                                >*</span>
+                            </label>
+
+                            <div class="entrada-validable">
+                                <input
+                                    type="text"
+                                    id="sintoma-orden"
+                                    name="sintoma"
+                                    aria-describedby="error-sintoma-orden ayuda-sintoma-orden"
+                                    required
+                                >
+
+                                <button
+                                    class="boton-ayuda-acceso"
+                                    type="button"
+                                    data-ayuda-campo="sintoma-orden"
+                                    aria-label="Mostrar ayuda del síntoma"
+                                    aria-controls="ayuda-sintoma-orden"
+                                    aria-expanded="false"
+                                    hidden
+                                >!</button>
+                            </div>
+
+                            <p
+                                class="error-acceso"
+                                id="error-sintoma-orden"
+                                aria-live="polite"
+                                hidden
+                            ></p>
+
+                            <p class="ayuda-acceso" id="ayuda-sintoma-orden" hidden>
+                                Describe la falla que informa el cliente.
+                                Puedes incluir números y puntuación cuando
+                                sean necesarios para explicar el problema.
+                            </p>
+                        </div>
+
+                        <!-- Diagnóstico posterior a la revisión -->
+
+                        <div class="campo-orden campo-orden-completo">
+                            <label for="diagnostico-orden">Diagnóstico</label>
+
+                            <div class="entrada-validable">
+                                <input
+                                    type="text"
+                                    id="diagnostico-orden"
+                                    name="diagnostico"
+                                    aria-describedby="error-diagnostico-orden ayuda-diagnostico-orden"
+                                >
+
+                                <button
+                                    class="boton-ayuda-acceso"
+                                    type="button"
+                                    data-ayuda-campo="diagnostico-orden"
+                                    aria-label="Mostrar ayuda del diagnóstico"
+                                    aria-controls="ayuda-diagnostico-orden"
+                                    aria-expanded="false"
+                                    hidden
+                                >!</button>
+                            </div>
+
+                            <p
+                                class="error-acceso"
+                                id="error-diagnostico-orden"
+                                aria-live="polite"
+                                hidden
+                            ></p>
+
+                            <p class="ayuda-acceso" id="ayuda-diagnostico-orden" hidden>
+                                Registra el resultado de la revisión técnica.
+                                Puede quedar pendiente al recibir la herramienta.
+                            </p>
+                        </div>
+
+                        <!-- Observaciones -->
+
+                        <div class="campo-orden campo-orden-completo">
+                            <label for="observaciones-orden">Observaciones</label>
+
+                            <div class="entrada-validable">
+                                <textarea
+                                    id="observaciones-orden"
+                                    name="observaciones"
+                                    rows="2"
+                                    aria-describedby="error-observaciones-orden ayuda-observaciones-orden"
+                                ></textarea>
+
+                                <button
+                                    class="boton-ayuda-acceso"
+                                    type="button"
+                                    data-ayuda-campo="observaciones-orden"
+                                    aria-label="Mostrar ayuda de las observaciones"
+                                    aria-controls="ayuda-observaciones-orden"
+                                    aria-expanded="false"
+                                    hidden
+                                >!</button>
+                            </div>
+
+                            <p
+                                class="error-acceso"
+                                id="error-observaciones-orden"
+                                aria-live="polite"
+                                hidden
+                            ></p>
+
+                            <p class="ayuda-acceso" id="ayuda-observaciones-orden" hidden>
+                                Describe el estado de recepción, los accesorios
+                                entregados y cualquier información adicional
+                                relevante.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tarjeta derecha: controles de la orden -->
+
+                <section
+                    class="tarjeta-orden tarjeta-controles-orden"
+                    aria-labelledby="titulo-controles-orden"
+                >
+                    <h3 class="solo-lectores" id="titulo-controles-orden">
+                        Estados, imágenes, valores y acciones
+                    </h3>
+
+                    <fieldset class="estados-orden" disabled>
+                        <legend class="solo-lectores">
+                            Estados del servicio
+                        </legend>
+
+                        <label class="estado-orden" for="autorizado-orden">
+                            <span>Autorizado</span>
+                            <input
+                                type="checkbox"
+                                id="autorizado-orden"
+                                name="autorizado"
+                            >
+                        </label>
+
+                        <label class="estado-orden" for="reparado-orden">
+                            <span>Reparado</span>
+                            <input
+                                type="checkbox"
+                                id="reparado-orden"
+                                name="reparado"
+                            >
+                        </label>
+
+                        <label class="estado-orden" for="entregado-orden">
+                            <span>Entregado</span>
+                            <input
+                                type="checkbox"
+                                id="entregado-orden"
+                                name="entregado"
+                            >
+                        </label>
+                    </fieldset>
+
+                    <!-- Impresión -->
+
+                    <div class="acciones-impresion-orden">
+                        <button
+                            class="boton-impresion-orden"
+                            id="btn-imprimir-orden"
+                            type="button"
+                            disabled
+                        >
+                            Imprimir orden
+                        </button>
+
+                        <button
+                            class="boton-impresion-orden"
+                            id="btn-imprimir-etiqueta"
+                            type="button"
+                            disabled
+                        >
+                            Imprimir etiqueta
+                        </button>
+                    </div>
+
+                    <!-- Evidencias del equipo -->
+
+                    <div class="imagenes-orden">
+                        <div class="campo-orden">
+                            <label for="imagen-orden">Agregar imagen</label>
+
+                            <div class="entrada-validable">
+                                <input
+                                    type="file"
+                                    id="imagen-orden"
+                                    name="imagenes"
+                                    accept="image/*"
+                                    multiple
+                                    aria-describedby="error-imagen-orden ayuda-imagen-orden"
+                                >
+
+                                <button
+                                    class="boton-ayuda-acceso"
+                                    type="button"
+                                    data-ayuda-campo="imagen-orden"
+                                    aria-label="Mostrar ayuda de las imágenes"
+                                    aria-controls="ayuda-imagen-orden"
+                                    aria-expanded="false"
+                                    hidden
+                                >!</button>
+                            </div>
+
+                            <p
+                                class="error-acceso"
+                                id="error-imagen-orden"
+                                aria-live="polite"
+                                hidden
+                            ></p>
+
+                            <p class="ayuda-acceso" id="ayuda-imagen-orden" hidden>
+                                Selecciona fotografías del equipo y de
+                                su estado al recibirlo.
+                            </p>
+                        </div>
+
+                        <div
+                            class="vista-previa-imagen-orden"
+                            id="vista-previa-imagen-orden"
+                            hidden
+                        >
+                            <div
+                                class="galeria-imagenes-orden"
+                                id="galeria-imagenes-orden"
+                            ></div>
+
+                            <p
+                                class="estado-imagenes-orden"
+                                id="estado-imagenes-orden"
+                                role="status"
+                            ></p>
+                        </div>
+                    </div>
+
+                    <!-- Valores del servicio -->
+
+                    <fieldset class="valores-orden">
+                        <legend class="solo-lectores">
+                            Valores del servicio
+                        </legend>
+
+                        <div class="campo-orden">
+                            <label for="subtotal-orden">Subtotal</label>
+
+                            <div class="entrada-validable">
+                                <input
+                                    type="number"
+                                    id="subtotal-orden"
+                                    name="subtotal"
+                                    min="0"
+                                    step="0.01"
+                                    value="0"
+                                    aria-describedby="error-subtotal-orden ayuda-subtotal-orden"
+                                >
+
+                                <button
+                                    class="boton-ayuda-acceso"
+                                    type="button"
+                                    data-ayuda-campo="subtotal-orden"
+                                    aria-label="Mostrar ayuda del subtotal"
+                                    aria-controls="ayuda-subtotal-orden"
+                                    aria-expanded="false"
+                                    hidden
+                                >!</button>
+                            </div>
+
+                            <p
+                                class="error-acceso"
+                                id="error-subtotal-orden"
+                                aria-live="polite"
+                                hidden
+                            ></p>
+
+                            <p class="ayuda-acceso" id="ayuda-subtotal-orden" hidden>
+                                Escribe un valor igual o mayor que cero,
+                                sin símbolos de moneda ni separadores de miles.
+                            </p>
+                        </div>
+
+                        <div class="campo-orden">
+                            <label for="abono-orden">Abono</label>
+
+                            <div class="entrada-validable">
+                                <input
+                                    type="number"
+                                    id="abono-orden"
+                                    name="abono"
+                                    min="0"
+                                    step="0.01"
+                                    value="0"
+                                    aria-describedby="error-abono-orden ayuda-abono-orden"
+                                >
+
+                                <button
+                                    class="boton-ayuda-acceso"
+                                    type="button"
+                                    data-ayuda-campo="abono-orden"
+                                    aria-label="Mostrar ayuda del abono"
+                                    aria-controls="ayuda-abono-orden"
+                                    aria-expanded="false"
+                                    hidden
+                                >!</button>
+                            </div>
+
+                            <p
+                                class="error-acceso"
+                                id="error-abono-orden"
+                                aria-live="polite"
+                                hidden
+                            ></p>
+
+                            <p class="ayuda-acceso" id="ayuda-abono-orden" hidden>
+                                Registra el dinero recibido como abono.
+                                No puede ser negativo ni superar el subtotal.
+                            </p>
+                        </div>
+
+                        <div class="campo-orden">
+                            <label for="total-orden">Total pendiente</label>
+
+                            <input
+                                type="number"
+                                id="total-orden"
+                                name="total"
+                                value="0"
+                                readonly
+                            >
+                        </div>
+                    </fieldset>
+
+                    <!-- Acciones generales -->
+
+                    <div class="acciones-orden">
+                        <button
+                            class="boton-guardar-orden"
+                            id="btn-guardar-orden"
+                            type="submit"
+                            disabled
+                        >
+                            Guardar
+                        </button>
+
+                        <button
+                            class="boton-cancelar-orden"
+                            id="btn-cancelar-orden"
+                            type="button"
+                            disabled
+                        >
+                            Cancelar
+                        </button>
+
+                        <button
+                            class="boton-whatsapp-orden"
+                            id="btn-whatsapp-orden"
+                            type="button"
+                            disabled
+                        >
+                            Enviar a WhatsApp
+                        </button>
+                    </div>
+
+                    <p
+                        class="mensaje-formulario"
+                        id="mensaje-formulario-orden"
+                        role="status"
+                    ></p>
+                </section>
+            </form>
+        </section>
+
+        <!-- Pantalla de búsqueda de órdenes de trabajo -->
+
+        <section
+            class="pantalla"
+            id="pantalla-buscar-orden"
+            aria-labelledby="titulo-buscar-orden"
+            hidden
+        >
+            <div class="encabezado-orden">
+                <img
+                    class="logo-orden"
+                    src="Imagenes/logo.jpg"
+                    alt=""
+                    width="64"
+                    height="64"
+                >
+
+                <h2 id="titulo-buscar-orden">
+                    Buscar orden de trabajo
+                </h2>
+            </div>
+
+            <!-- Buscador y acciones -->
+
+            <form
+                class="formulario-validable formulario-buscar-orden"
+                id="formulario-buscar-orden"
+                novalidate
+            >
+                <div class="campo-busqueda-orden">
+                    <label for="criterio-buscar-orden">
+                        Ingrese el N.º de orden, nombre o NIT / Cédula
+                    </label>
+
+                    <div class="entrada-validable entrada-busqueda-orden">
+                        <button
+                            class="boton-limpiar-busqueda"
+                            id="btn-limpiar-busqueda-orden"
+                            type="button"
+                            aria-label="Limpiar el campo de búsqueda"
+                            aria-controls="criterio-buscar-orden"
+                            hidden
+                        >
+                            <span aria-hidden="true">×</span>
+                        </button>
+
+                        <input
+                            type="text"
+                            id="criterio-buscar-orden"
+                            name="criterio"
+                            autocomplete="off"
+                            enterkeyhint="search"
+                            aria-describedby="error-criterio-buscar-orden ayuda-criterio-buscar-orden"
+                        >
+
+                        <button
+                            class="boton-ayuda-acceso"
+                            type="button"
+                            data-ayuda-campo="criterio-buscar-orden"
+                            aria-label="Mostrar ayuda de la búsqueda"
+                            aria-controls="ayuda-criterio-buscar-orden"
+                            aria-expanded="false"
+                            hidden
+                        >!</button>
+                    </div>
+
+                    <p
+                        class="error-acceso"
+                        id="error-criterio-buscar-orden"
+                        aria-live="polite"
+                        hidden
+                    ></p>
+
+                    <p
+                        class="ayuda-acceso"
+                        id="ayuda-criterio-buscar-orden"
+                        hidden
+                    >
+                        Escribe el número exacto de la orden, el nombre completo
+                        del cliente o su NIT / Cédula. Para el nombre no se
+                        distinguen tildes, mayúsculas ni minúsculas.
+                        Deja el campo vacío y pulsa Buscar para ver todos
+                        los registros.
+                    </p>
+                </div>
+
+                <div class="acciones-busqueda-orden">
+                    <button
+                        class="boton-whatsapp-orden"
+                        id="btn-ejecutar-busqueda-orden"
+                        type="submit"
+                        disabled
+                    >
+                        Buscar
+                    </button>
+
+                    <button
+                        class="boton-cancelar-orden"
+                        id="btn-cancelar-busqueda-orden"
+                        type="button"
+                        disabled
+                    >
+                        Cancelar
+                    </button>
+                </div>
+            </form>
+
+            <!-- Estado de la búsqueda -->
+
+            <p
+                class="mensaje-formulario mensaje-busqueda-orden"
+                id="mensaje-busqueda-orden"
+                role="status"
+                aria-atomic="true"
+            ></p>
+
+            <!-- Resultados -->
+
+            <div
+                class="contenedor-resultados-orden"
+                id="contenedor-resultados-orden"
+            >
+                <table class="tabla-ordenes">
+                    <caption class="solo-lectores">
+                        Resultados de la búsqueda de órdenes de trabajo
+                    </caption>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">N.º de orden</th>
+                            <th scope="col">Fecha</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Teléfono</th>
+                            <th scope="col">NIT / Cédula</th>
+                            <th scope="col">Ítems</th>
+                            <th scope="col">Acción</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="cuerpo-resultados-orden"></tbody>
+                </table>
+            </div>
+
+            <!-- Paginación de los resultados -->
+
+            <nav
+                class="paginacion-ordenes"
+                id="paginacion-resultados-orden"
+                aria-label="Páginas de resultados de órdenes"
+                hidden
+            >
+                <button
+                    class="boton-paginacion-orden"
+                    id="btn-pagina-anterior-orden"
+                    type="button"
+                    disabled
+                >
+                    Anterior
+                </button>
+
+                <p
+                    class="informacion-paginacion-orden"
+                    id="informacion-paginacion-orden"
+                    role="status"
+                    aria-atomic="true"
+                ></p>
+
+                <button
+                    class="boton-paginacion-orden"
+                    id="btn-pagina-siguiente-orden"
+                    type="button"
+                    disabled
+                >
+                    Siguiente
+                </button>
+            </nav>
+        </section>
+
+        <!-- Ventana flotante: otras órdenes del cliente -->
+
+        <dialog
+            class="dialogo-ordenes-cliente"
+            id="dialogo-ordenes-cliente"
+            aria-labelledby="titulo-ordenes-cliente"
+        >
+            <div class="encabezado-dialogo-ordenes">
+                <h2 id="titulo-ordenes-cliente">
+                    Otras órdenes del cliente
+                </h2>
+
+                <button
+                    class="boton-cerrar-dialogo-ordenes"
+                    id="btn-cerrar-ordenes-cliente"
+                    type="button"
+                    aria-label="Cerrar otras órdenes del cliente"
+                >
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+
+            <p
+                class="datos-cliente-dialogo"
+                id="datos-cliente-ordenes"
+            ></p>
+
+            <p
+                class="mensaje-formulario"
+                id="mensaje-ordenes-cliente"
+                role="status"
+            ></p>
+
+            <div class="contenedor-tabla-dialogo">
+                <table class="tabla-ordenes">
+                    <caption class="solo-lectores">
+                        Otras órdenes asociadas al cliente seleccionado
+                    </caption>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">N.º de orden</th>
+                            <th scope="col">Fecha</th>
+                            <th scope="col">Ítems</th>
+                            <th scope="col">Estado</th>
+                            <th scope="col">Acción</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="cuerpo-ordenes-cliente"></tbody>
+                </table>
+            </div>
+
+            <nav
+                class="paginacion-ordenes"
+                id="paginacion-ordenes-cliente"
+                aria-label="Páginas de otras órdenes del cliente"
+                hidden
+            >
+                <button
+                    class="boton-paginacion-orden"
+                    id="btn-anterior-ordenes-cliente"
+                    type="button"
+                    disabled
+                >
+                    Anterior
+                </button>
+
+                <p
+                    class="informacion-paginacion-orden"
+                    id="informacion-ordenes-cliente"
+                    role="status"
+                    aria-atomic="true"
+                ></p>
+
+                <button
+                    class="boton-paginacion-orden"
+                    id="btn-siguiente-ordenes-cliente"
+                    type="button"
+                    disabled
+                >
+                    Siguiente
+                </button>
+            </nav>
+        </dialog>
+
+        <!-- Plantilla de una fila de resultados -->
+
+        <template id="plantilla-resultado-orden">
+            <tr class="fila-resultado-orden">
+                <th scope="row" data-columna="numero"></th>
+                <td data-columna="fecha"></td>
+                <td data-columna="cliente"></td>
+                <td data-columna="telefono"></td>
+                <td data-columna="documento"></td>
+                <td data-columna="items"></td>
+
+                <td>
+                    <div class="acciones-fila-orden">
+                        <button
+                            class="boton-whatsapp-orden"
+                            type="button"
+                            data-accion="abrir-orden"
+                        >
+                            Ver / editar
+                        </button>
+
+                        <button
+                            class="boton-otras-ordenes"
+                            type="button"
+                            data-accion="otras-ordenes"
+                            aria-haspopup="dialog"
+                            aria-controls="dialogo-ordenes-cliente"
+                            hidden
+                        >
+                            Otras órdenes
+                            <span data-columna="cantidad-otras"></span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        </template>
+
+        <!-- Plantilla de una fila de la ventana flotante -->
+
+        <template id="plantilla-otra-orden-cliente">
+            <tr>
+                <th scope="row" data-columna="numero"></th>
+                <td data-columna="fecha"></td>
+                <td data-columna="items"></td>
+                <td data-columna="estado"></td>
+
+                <td>
+                    <button
+                        class="boton-whatsapp-orden"
+                        type="button"
+                        data-accion="abrir-orden"
+                    >
+                        Ver / editar
+                    </button>
+                </td>
+            </tr>
+        </template>
+
+        <!-- Pantalla de creación de facturas -->
+
+        <section
+            class="pantalla"
+            id="pantalla-crear-factura"
+            aria-labelledby="titulo-crear-factura"
+            hidden
+        >
+            <div class="encabezado-orden">
+                <img
+                    class="logo-orden"
+                    src="Imagenes/logo.jpg"
+                    alt=""
+                    width="64"
+                    height="64"
+                >
+
+                <h2 id="titulo-crear-factura">
+                    Crear factura
+                </h2>
+            </div>
+
+            <form
+                class="formulario-validable formulario-factura"
+                id="formulario-factura"
+                novalidate
+            >
+                <!-- Tarjeta superior: datos generales y cliente -->
+
+                <section
+                    class="tarjeta-orden datos-factura"
+                    aria-labelledby="titulo-datos-factura"
+                >
+                    <h3 class="solo-lectores" id="titulo-datos-factura">
+                        Datos de la factura y del cliente
+                    </h3>
+
+                    <div class="campos-orden">
+                        <div class="campo-orden">
+                            <label for="fecha-factura">Fecha</label>
+
+                            <input
+                                type="date"
+                                id="fecha-factura"
+                                name="fecha"
+                                readonly
+                            >
+                        </div>
+
+                        <div class="campo-orden">
+                            <label for="numero-factura">N.º de factura</label>
+
+                            <input
+                                type="text"
+                                id="numero-factura"
+                                name="numero"
+                                placeholder="Pendiente"
+                                readonly
+                            >
+                        </div>
+
+                        <div class="campo-orden">
+                            <label for="cliente-factura">
+                                Cliente<span
+                                    class="asterisco-obligatorio"
+                                    aria-hidden="true"
+                                >*</span>
+                            </label>
+
+                            <div class="entrada-validable">
+                                <input
+                                    type="text"
+                                    id="cliente-factura"
+                                    name="cliente"
+                                    autocomplete="off"
+                                    aria-describedby="error-cliente-factura ayuda-cliente-factura"
+                                    required
+                                >
+
+                                <button
+                                    class="boton-ayuda-acceso"
+                                    type="button"
+                                    data-ayuda-campo="cliente-factura"
+                                    aria-label="Mostrar ayuda del cliente"
+                                    aria-controls="ayuda-cliente-factura"
+                                    aria-expanded="false"
+                                    hidden
+                                >!</button>
+                            </div>
+
+                            <p
+                                class="error-acceso"
+                                id="error-cliente-factura"
+                                aria-live="polite"
+                                hidden
+                            ></p>
+
+                            <p class="ayuda-acceso" id="ayuda-cliente-factura" hidden>
+                                Escribe el nombre completo del cliente
+                                o la razón social de la empresa.
+                            </p>
+                        </div>
+
+                        <div class="campo-orden">
+                            <label for="nit-factura">
+                                NIT<span
+                                    class="asterisco-obligatorio"
+                                    aria-hidden="true"
+                                >*</span>
+                            </label>
+
+                            <div class="entrada-validable">
+                                <input
+                                    type="text"
+                                    id="nit-factura"
+                                    name="nit"
+                                    autocomplete="off"
+                                    aria-describedby="error-nit-factura ayuda-nit-factura"
+                                    required
+                                >
+
+                                <button
+                                    class="boton-ayuda-acceso"
+                                    type="button"
+                                    data-ayuda-campo="nit-factura"
+                                    aria-label="Mostrar ayuda del NIT"
+                                    aria-controls="ayuda-nit-factura"
+                                    aria-expanded="false"
+                                    hidden
+                                >!</button>
+                            </div>
+
+                            <p
+                                class="error-acceso"
+                                id="error-nit-factura"
+                                aria-live="polite"
+                                hidden
+                            ></p>
+
+                            <p class="ayuda-acceso" id="ayuda-nit-factura" hidden>
+                                Escribe el NIT sin puntos ni espacios.
+                                Puedes usar un guion para separar
+                                el dígito de verificación.
+                            </p>
+                        </div>
+
+                        <div class="campo-orden">
+                            <label for="direccion-factura">
+                                Dirección<span
+                                    class="asterisco-obligatorio"
+                                    aria-hidden="true"
+                                >*</span>
+                            </label>
+
+                            <div class="entrada-validable">
+                                <input
+                                    type="text"
+                                    id="direccion-factura"
+                                    name="direccion"
+                                    autocomplete="off"
+                                    aria-describedby="error-direccion-factura ayuda-direccion-factura"
+                                    required
+                                >
+
+                                <button
+                                    class="boton-ayuda-acceso"
+                                    type="button"
+                                    data-ayuda-campo="direccion-factura"
+                                    aria-label="Mostrar ayuda de la dirección"
+                                    aria-controls="ayuda-direccion-factura"
+                                    aria-expanded="false"
+                                    hidden
+                                >!</button>
+                            </div>
+
+                            <p
+                                class="error-acceso"
+                                id="error-direccion-factura"
+                                aria-live="polite"
+                                hidden
+                            ></p>
+
+                            <p
+                                class="ayuda-acceso"
+                                id="ayuda-direccion-factura"
+                                hidden
+                            >
+                                Escribe la dirección completa del cliente.
+                                Puedes incluir letras, números y signos
+                                propios de una dirección, como #, guion y punto.
+                            </p>
+                        </div>
+
+                        <div class="campo-orden">
+                            <label for="telefono-factura">
+                                Teléfono<span
+                                    class="asterisco-obligatorio"
+                                    aria-hidden="true"
+                                >*</span>
+                            </label>
+
+                            <div class="entrada-validable">
+                                <input
+                                    type="tel"
+                                    id="telefono-factura"
+                                    name="telefono"
+                                    autocomplete="off"
+                                    aria-describedby="error-telefono-factura ayuda-telefono-factura"
+                                    required
+                                >
+
+                                <button
+                                    class="boton-ayuda-acceso"
+                                    type="button"
+                                    data-ayuda-campo="telefono-factura"
+                                    aria-label="Mostrar ayuda del teléfono"
+                                    aria-controls="ayuda-telefono-factura"
+                                    aria-expanded="false"
+                                    hidden
+                                >!</button>
+                            </div>
+
+                            <p
+                                class="error-acceso"
+                                id="error-telefono-factura"
+                                aria-live="polite"
+                                hidden
+                            ></p>
+
+                            <p
+                                class="ayuda-acceso"
+                                id="ayuda-telefono-factura"
+                                hidden
+                            >
+                                Usa números y, opcionalmente, un signo +
+                                al principio para el indicativo internacional.
+                                No uses letras ni espacios.
+                            </p>
+                        </div>
+                    </div>
+
+                    <p
+                        class="origen-factura"
+                        id="origen-factura"
+                        hidden
+                    ></p>
+                </section>
+
+                <!-- Tarjetas inferiores: ítems y acciones -->
+
+                <div class="tarjetas-orden tarjetas-detalle-factura">
+                    <section
+                        class="tarjeta-orden detalle-factura"
+                        aria-labelledby="titulo-detalle-factura"
+                    >
+                        <h3 class="solo-lectores" id="titulo-detalle-factura">
+                            Ítems de la factura
+                        </h3>
+
+                        <div class="contenedor-tabla-factura">
+                            <table class="tabla-items-factura">
+                                <caption class="solo-lectores">
+                                    Cantidades, descripciones y valores unitarios
+                                    de los ítems facturados
+                                </caption>
+
+                                <thead>
+                                    <tr>
+                                        <th scope="col">
+                                            Cantidad<span
+                                                class="asterisco-obligatorio"
+                                                aria-hidden="true"
+                                            >*</span>
+                                        </th>
+
+                                        <th scope="col">
+                                            Descripción<span
+                                                class="asterisco-obligatorio"
+                                                aria-hidden="true"
+                                            >*</span>
+                                        </th>
+
+                                        <th scope="col">
+                                            Valor unitario<span
+                                                class="asterisco-obligatorio"
+                                                aria-hidden="true"
+                                            >*</span>
+                                        </th>
+
+                                        <th scope="col">
+                                            <span class="solo-lectores">Acción</span>
+                                        </th>
+                                    </tr>
+                                </thead>
+
+                                <tbody id="cuerpo-items-factura"></tbody>
+                            </table>
+                        </div>
+
+                        <p
+                            class="error-acceso"
+                            id="error-items-factura"
+                            aria-live="polite"
+                            hidden
+                        ></p>
+
+                        <button
+                            class="boton-whatsapp-orden"
+                            id="btn-agregar-item-factura"
+                            type="button"
+                            disabled
+                        >
+                            + Agregar ítem
+                        </button>
+                    </section>
+
+                    <section
+                        class="tarjeta-orden tarjeta-controles-orden controles-factura"
+                        aria-labelledby="titulo-controles-factura"
+                    >
+                        <h3 class="solo-lectores" id="titulo-controles-factura">
+                            Carga de documentos, valores y acciones
+                        </h3>
+
+                        <div class="acciones-carga-factura">
+                            <button
+                                class="boton-whatsapp-orden"
+                                id="btn-cargar-orden-factura"
+                                type="button"
+                                disabled
+                            >
+                                Cargar orden
+                            </button>
+
+                            <button
+                                class="boton-whatsapp-orden"
+                                id="btn-cargar-cotizacion-factura"
+                                type="button"
+                                disabled
+                            >
+                                Cargar cotización
+                            </button>
+
+                            <button
+                                class="boton-impresion-orden"
+                                id="btn-imprimir-factura"
+                                type="button"
+                                disabled
+                            >
+                                Imprimir
+                            </button>
+                        </div>
+
+                        <fieldset class="valores-orden valores-factura">
+                            <legend class="solo-lectores">
+                                Valores de la factura
+                            </legend>
+
+                            <div class="campo-orden">
+                                <label for="subtotal-factura">Subtotal</label>
+
+                                <input
+                                    type="text"
+                                    id="subtotal-factura"
+                                    name="subtotal"
+                                    value="0"
+                                    readonly
+                                >
+                            </div>
+
+                            <div class="campo-orden">
+                                <label for="abono-factura">Abono</label>
+
+                                <input
+                                    type="number"
+                                    id="abono-factura"
+                                    name="abono"
+                                    min="0"
+                                    step="0.01"
+                                    value="0"
+                                    aria-describedby="error-abono-factura"
+                                >
+
+                                <p
+                                    class="error-acceso"
+                                    id="error-abono-factura"
+                                    aria-live="polite"
+                                    hidden
+                                ></p>
+                            </div>
+
+                            <div class="campo-orden">
+                                <label for="saldo-factura">Saldo pendiente</label>
+
+                                <input
+                                    type="text"
+                                    id="saldo-factura"
+                                    name="saldo"
+                                    value="0"
+                                    readonly
+                                >
+                            </div>
+                        </fieldset>
+
+                        <div class="acciones-orden">
+                            <button
+                                class="boton-guardar-orden"
+                                id="btn-guardar-factura"
+                                type="submit"
+                                disabled
+                            >
+                                Guardar
+                            </button>
+
+                            <button
+                                class="boton-cancelar-orden"
+                                id="btn-cancelar-factura"
+                                type="button"
+                                disabled
+                            >
+                                Cancelar
+                            </button>
+
+                            <button
+                                class="boton-whatsapp-orden"
+                                id="btn-whatsapp-factura"
+                                type="button"
+                                disabled
+                            >
+                                Enviar a WhatsApp
+                            </button>
+                        </div>
+
+                        <p
+                            class="mensaje-formulario"
+                            id="mensaje-formulario-factura"
+                            role="status"
+                        ></p>
+                    </section>
+                </div>
+            </form>
+        </section>
+
+        <!-- Plantilla reutilizable de un ítem de factura -->
+
+        <template id="plantilla-item-factura">
+            <tr class="fila-item-factura">
+                <td>
+                    <div class="campo-orden">
+                        <input
+                            type="number"
+                            data-campo-item="cantidad"
+                            aria-label="Cantidad del ítem"
+                            min="1"
+                            step="1"
+                            value="1"
+                            required
+                        >
+
+                        <p
+                            class="error-acceso"
+                            data-error-item="cantidad"
+                            aria-live="polite"
+                            hidden
+                        ></p>
+                    </div>
+                </td>
+
+                <td>
+                    <div class="campo-orden">
+                        <div class="entrada-validable">
+                            <input
+                                type="text"
+                                data-campo-item="descripcion"
+                                aria-label="Descripción del ítem"
+                                required
+                            >
+
+                            <button
+                                class="boton-ayuda-acceso"
+                                type="button"
+                                data-ayuda-item="descripcion"
+                                aria-label="Mostrar ayuda de la descripción"
+                                aria-expanded="false"
+                                hidden
+                            >!</button>
+                        </div>
+
+                        <p
+                            class="error-acceso"
+                            data-error-item="descripcion"
+                            aria-live="polite"
+                            hidden
+                        ></p>
+
+                        <p
+                            class="ayuda-acceso"
+                            data-texto-ayuda-item="descripcion"
+                            hidden
+                        >
+                            Describe el producto, repuesto o servicio.
+                            Puedes utilizar letras, números y puntuación.
+                            No dejes únicamente espacios o signos.
+                        </p>
+                    </div>
+                </td>
+
+                <td>
+                    <div class="campo-orden">
+                        <input
+                            type="number"
+                            data-campo-item="valor"
+                            aria-label="Valor unitario del ítem"
+                            min="0"
+                            step="0.01"
+                            value="0"
+                            required
+                        >
+
+                        <p
+                            class="error-acceso"
+                            data-error-item="valor"
+                            aria-live="polite"
+                            hidden
+                        ></p>
+                    </div>
+                </td>
+
+                <td class="accion-item-factura">
+                    <button
+                        class="boton-eliminar-item-factura"
+                        type="button"
+                        data-accion-item="eliminar"
+                        aria-label="Eliminar este ítem"
+                    >
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </td>
+            </tr>
+        </template>
+
+        <!-- Confirmación antes de reemplazar el contenido de la factura -->
+
+        <dialog
+            class="dialogo-confirmacion-factura"
+            id="dialogo-reemplazar-factura"
+            aria-labelledby="titulo-reemplazar-factura"
+            aria-describedby="texto-reemplazar-factura"
+        >
+            <h2 id="titulo-reemplazar-factura">
+                Reemplazar datos de la factura
+            </h2>
+
+            <p id="texto-reemplazar-factura">
+                La factura contiene información sin guardar.
+                Al cargar otro documento se reemplazarán los datos
+                y los ítems actuales. ¿Deseas continuar?
+            </p>
+
+            <div class="acciones-confirmacion-factura">
+                <button
+                    class="boton-cancelar-orden"
+                    id="btn-conservar-datos-factura"
+                    type="button"
+                    autofocus
+                >
+                    No, conservar
+                </button>
+
+                <button
+                    class="boton-guardar-orden"
+                    id="btn-confirmar-reemplazo-factura"
+                    type="button"
+                >
+                    Sí, reemplazar
+                </button>
+            </div>
+        </dialog>
+
+        <!-- Pantalla de búsqueda de facturas -->
+
+        <section
+            class="pantalla"
+            id="pantalla-buscar-factura"
+            aria-labelledby="titulo-buscar-factura"
+            hidden
+        >
+            <div class="encabezado-orden">
+                <img
+                    class="logo-orden"
+                    src="Imagenes/logo.jpg"
+                    alt=""
+                    width="64"
+                    height="64"
+                >
+
+                <h2 id="titulo-buscar-factura">
+                    Buscar factura
+                </h2>
+            </div>
+
+            <!-- Buscador y acciones -->
+
+            <form
+                class="formulario-validable formulario-buscar-orden"
+                id="formulario-buscar-factura"
+                novalidate
+            >
+                <div class="campo-busqueda-orden">
+                    <label for="criterio-buscar-factura">
+                        Número de factura
+                    </label>
+
+                    <div class="entrada-validable entrada-busqueda-orden">
+                        <input
+                            type="text"
+                            id="criterio-buscar-factura"
+                            name="numero-factura"
+                            inputmode="numeric"
+                            pattern="[0-9]*"
+                            enterkeyhint="search"
+                            autocomplete="off"
+                            aria-describedby="error-criterio-buscar-factura"
+                        >
+
+                        <button
+                            class="boton-limpiar-busqueda"
+                            id="btn-limpiar-busqueda-factura"
+                            type="button"
+                            aria-label="Limpiar el número de factura"
+                            aria-controls="criterio-buscar-factura"
+                            hidden
+                        >
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+
+                    <p
+                        class="error-acceso"
+                        id="error-criterio-buscar-factura"
+                        aria-live="polite"
+                        hidden
+                    ></p>
+                </div>
+
+                <div class="acciones-busqueda-orden">
+                    <button
+                        class="boton-whatsapp-orden"
+                        id="btn-ejecutar-busqueda-factura"
+                        type="submit"
+                        disabled
+                    >
+                        Buscar
+                    </button>
+
+                    <button
+                        class="boton-cancelar-orden"
+                        id="btn-cancelar-busqueda-factura"
+                        type="button"
+                        disabled
+                    >
+                        Cancelar
+                    </button>
+                </div>
+            </form>
+
+            <!-- Mensaje de resultados -->
+
+            <p
+                class="mensaje-formulario mensaje-busqueda-orden"
+                id="mensaje-busqueda-factura"
+                role="status"
+                aria-atomic="true"
+            ></p>
+
+            <!-- Tabla de facturas -->
+
+            <div
+                class="contenedor-resultados-orden resultados-factura"
+                id="contenedor-resultados-factura"
+            >
+                <table class="tabla-ordenes tabla-resultados-factura">
+                    <caption class="solo-lectores">
+                        Resultados de la búsqueda de facturas
+                        y sus órdenes de trabajo relacionadas
+                    </caption>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">N.º de factura</th>
+                            <th scope="col">N.º de orden</th>
+                            <th scope="col">Fecha</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Teléfono</th>
+                            <th scope="col">NIT</th>
+                            <th scope="col">Ítems</th>
+                            <th scope="col">Acción</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="cuerpo-resultados-factura"></tbody>
+                </table>
+            </div>
+
+            <!-- Paginación de resultados -->
+
+            <nav
+                class="paginacion-ordenes"
+                id="paginacion-resultados-factura"
+                aria-label="Páginas de resultados de facturas"
+                hidden
+            >
+                <button
+                    class="boton-paginacion-orden"
+                    id="btn-pagina-anterior-factura"
+                    type="button"
+                    disabled
+                >
+                    Anterior
+                </button>
+
+                <p
+                    class="informacion-paginacion-orden"
+                    id="informacion-paginacion-factura"
+                    role="status"
+                    aria-atomic="true"
+                ></p>
+
+                <button
+                    class="boton-paginacion-orden"
+                    id="btn-pagina-siguiente-factura"
+                    type="button"
+                    disabled
+                >
+                    Siguiente
+                </button>
+            </nav>
+        </section>
+
+        <!-- Plantilla reutilizable de un resultado de factura -->
+
+        <template id="plantilla-resultado-factura">
+            <tr class="fila-resultado-orden fila-resultado-factura">
+                <th scope="row" data-columna="numero-factura"></th>
+                <td data-columna="numero-orden"></td>
+                <td data-columna="fecha"></td>
+                <td data-columna="cliente"></td>
+                <td data-columna="telefono"></td>
+                <td data-columna="nit"></td>
+                <td data-columna="items"></td>
+
+                <td>
+                    <div class="acciones-fila-orden">
+                        <button
+                            class="boton-whatsapp-orden"
+                            type="button"
+                            data-accion="abrir-factura"
+                            disabled
+                        >
+                            Ver / editar
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        </template>
+
+        <!-- Pantalla de creación de cotizaciones -->
+
+        <section
+            class="pantalla"
+            id="pantalla-crear-cotizacion"
+            aria-labelledby="titulo-crear-cotizacion"
+            hidden
+        >
+            <div class="encabezado-orden">
+                <img
+                    class="logo-orden"
+                    src="Imagenes/logo.jpg"
+                    alt=""
+                    width="64"
+                    height="64"
+                >
+
+                <h2 id="titulo-crear-cotizacion">
+                    Crear cotización
+                </h2>
+            </div>
+
+            <form
+                class="formulario-validable formulario-factura formulario-cotizacion"
+                id="formulario-cotizacion"
+                novalidate
+            >
+                <!-- Datos generales y cliente -->
+
+                <section
+                    class="tarjeta-orden datos-factura"
+                    aria-labelledby="titulo-datos-cotizacion"
+                >
+                    <h3 class="solo-lectores" id="titulo-datos-cotizacion">
+                        Datos de la cotización y del cliente
+                    </h3>
+
+                    <div class="campos-orden">
+                        <div class="campo-orden">
+                            <label for="fecha-cotizacion">Fecha</label>
+
+                            <input
+                                type="date"
+                                id="fecha-cotizacion"
+                                name="fecha"
+                                readonly
+                            >
+                        </div>
+
+                        <div class="campo-orden">
+                            <label for="numero-cotizacion">
+                                N.º de cotización
+                            </label>
+
+                            <input
+                                type="text"
+                                id="numero-cotizacion"
+                                name="numero"
+                                placeholder="Pendiente"
+                                readonly
+                            >
+                        </div>
+
+                        <div class="campo-orden">
+                            <label for="cliente-cotizacion">
+                                Cliente<span
+                                    class="asterisco-obligatorio"
+                                    aria-hidden="true"
+                                >*</span>
+                            </label>
+
+                            <div class="entrada-validable">
+                                <input
+                                    type="text"
+                                    id="cliente-cotizacion"
+                                    name="cliente"
+                                    autocomplete="off"
+                                    aria-describedby="error-cliente-cotizacion ayuda-cliente-cotizacion"
+                                    required
+                                >
+
+                                <button
+                                    class="boton-ayuda-acceso"
+                                    type="button"
+                                    data-ayuda-campo="cliente-cotizacion"
+                                    aria-label="Mostrar ayuda del cliente"
+                                    aria-controls="ayuda-cliente-cotizacion"
+                                    aria-expanded="false"
+                                    hidden
+                                >!</button>
+                            </div>
+
+                            <p
+                                class="error-acceso"
+                                id="error-cliente-cotizacion"
+                                aria-live="polite"
+                                hidden
+                            ></p>
+
+                            <p
+                                class="ayuda-acceso"
+                                id="ayuda-cliente-cotizacion"
+                                hidden
+                            >
+                                Escribe el nombre completo del cliente
+                                o la razón social de la empresa.
+                            </p>
+                        </div>
+
+                        <div class="campo-orden">
+                            <label for="nit-cotizacion">
+                                NIT<span
+                                    class="asterisco-obligatorio"
+                                    aria-hidden="true"
+                                >*</span>
+                            </label>
+
+                            <div class="entrada-validable">
+                                <input
+                                    type="text"
+                                    id="nit-cotizacion"
+                                    name="nit"
+                                    autocomplete="off"
+                                    aria-describedby="error-nit-cotizacion ayuda-nit-cotizacion"
+                                    required
+                                >
+
+                                <button
+                                    class="boton-ayuda-acceso"
+                                    type="button"
+                                    data-ayuda-campo="nit-cotizacion"
+                                    aria-label="Mostrar ayuda del NIT"
+                                    aria-controls="ayuda-nit-cotizacion"
+                                    aria-expanded="false"
+                                    hidden
+                                >!</button>
+                            </div>
+
+                            <p
+                                class="error-acceso"
+                                id="error-nit-cotizacion"
+                                aria-live="polite"
+                                hidden
+                            ></p>
+
+                            <p
+                                class="ayuda-acceso"
+                                id="ayuda-nit-cotizacion"
+                                hidden
+                            >
+                                Escribe el NIT sin puntos ni espacios.
+                                Puedes usar un guion para separar
+                                el dígito de verificación.
+                            </p>
+                        </div>
+
+                        <div class="campo-orden">
+                            <label for="direccion-cotizacion">
+                                Dirección<span
+                                    class="asterisco-obligatorio"
+                                    aria-hidden="true"
+                                >*</span>
+                            </label>
+
+                            <div class="entrada-validable">
+                                <input
+                                    type="text"
+                                    id="direccion-cotizacion"
+                                    name="direccion"
+                                    autocomplete="off"
+                                    aria-describedby="error-direccion-cotizacion ayuda-direccion-cotizacion"
+                                    required
+                                >
+
+                                <button
+                                    class="boton-ayuda-acceso"
+                                    type="button"
+                                    data-ayuda-campo="direccion-cotizacion"
+                                    aria-label="Mostrar ayuda de la dirección"
+                                    aria-controls="ayuda-direccion-cotizacion"
+                                    aria-expanded="false"
+                                    hidden
+                                >!</button>
+                            </div>
+
+                            <p
+                                class="error-acceso"
+                                id="error-direccion-cotizacion"
+                                aria-live="polite"
+                                hidden
+                            ></p>
+
+                            <p
+                                class="ayuda-acceso"
+                                id="ayuda-direccion-cotizacion"
+                                hidden
+                            >
+                                Escribe la dirección completa del cliente.
+                                Puedes incluir letras, números y signos
+                                propios de una dirección, como #, guion y punto.
+                            </p>
+                        </div>
+
+                        <div class="campo-orden">
+                            <label for="telefono-cotizacion">
+                                Teléfono<span
+                                    class="asterisco-obligatorio"
+                                    aria-hidden="true"
+                                >*</span>
+                            </label>
+
+                            <div class="entrada-validable">
+                                <input
+                                    type="tel"
+                                    id="telefono-cotizacion"
+                                    name="telefono"
+                                    autocomplete="off"
+                                    aria-describedby="error-telefono-cotizacion ayuda-telefono-cotizacion"
+                                    required
+                                >
+
+                                <button
+                                    class="boton-ayuda-acceso"
+                                    type="button"
+                                    data-ayuda-campo="telefono-cotizacion"
+                                    aria-label="Mostrar ayuda del teléfono"
+                                    aria-controls="ayuda-telefono-cotizacion"
+                                    aria-expanded="false"
+                                    hidden
+                                >!</button>
+                            </div>
+
+                            <p
+                                class="error-acceso"
+                                id="error-telefono-cotizacion"
+                                aria-live="polite"
+                                hidden
+                            ></p>
+
+                            <p
+                                class="ayuda-acceso"
+                                id="ayuda-telefono-cotizacion"
+                                hidden
+                            >
+                                Usa números y, opcionalmente, un signo +
+                                al principio para el indicativo internacional.
+                                No uses letras ni espacios.
+                            </p>
+                        </div>
+                    </div>
+
+                    <p
+                        class="origen-factura"
+                        id="origen-cotizacion"
+                        hidden
+                    ></p>
+                </section>
+
+                <!-- Detalle y controles -->
+
+                <div class="tarjetas-orden tarjetas-detalle-factura">
+                    <section
+                        class="tarjeta-orden detalle-factura"
+                        aria-labelledby="titulo-detalle-cotizacion"
+                    >
+                        <h3 class="solo-lectores" id="titulo-detalle-cotizacion">
+                            Ítems de la cotización
+                        </h3>
+
+                        <div class="contenedor-tabla-factura">
+                            <table class="tabla-items-factura">
+                                <caption class="solo-lectores">
+                                    Cantidades, descripciones y valores unitarios
+                                    de los ítems cotizados
+                                </caption>
+
+                                <thead>
+                                    <tr>
+                                        <th scope="col">
+                                            Cantidad<span
+                                                class="asterisco-obligatorio"
+                                                aria-hidden="true"
+                                            >*</span>
+                                        </th>
+
+                                        <th scope="col">
+                                            Descripción<span
+                                                class="asterisco-obligatorio"
+                                                aria-hidden="true"
+                                            >*</span>
+                                        </th>
+
+                                        <th scope="col">
+                                            Valor unitario<span
+                                                class="asterisco-obligatorio"
+                                                aria-hidden="true"
+                                            >*</span>
+                                        </th>
+
+                                        <th scope="col">
+                                            <span class="solo-lectores">Acción</span>
+                                        </th>
+                                    </tr>
+                                </thead>
+
+                                <tbody id="cuerpo-items-cotizacion"></tbody>
+                            </table>
+                        </div>
+
+                        <p
+                            class="error-acceso"
+                            id="error-items-cotizacion"
+                            aria-live="polite"
+                            hidden
+                        ></p>
+
+                        <button
+                            class="boton-whatsapp-orden"
+                            id="btn-agregar-item-cotizacion"
+                            type="button"
+                            disabled
+                        >
+                            + Agregar ítem
+                        </button>
+                    </section>
+
+                    <section
+                        class="tarjeta-orden tarjeta-controles-orden controles-factura"
+                        aria-labelledby="titulo-controles-cotizacion"
+                    >
+                        <h3 class="solo-lectores" id="titulo-controles-cotizacion">
+                            Carga de orden, valores y acciones
+                        </h3>
+
+                        <div class="acciones-carga-factura">
+                            <button
+                                class="boton-whatsapp-orden"
+                                id="btn-cargar-orden-cotizacion"
+                                type="button"
+                                disabled
+                            >
+                                Cargar orden
+                            </button>
+
+                            <button
+                                class="boton-impresion-orden"
+                                id="btn-imprimir-cotizacion"
+                                type="button"
+                                disabled
+                            >
+                                Imprimir
+                            </button>
+                        </div>
+
+                        <fieldset class="valores-orden valores-factura">
+                            <legend class="solo-lectores">
+                                Valores de la cotización
+                            </legend>
+
+                            <div class="campo-orden">
+                                <label for="subtotal-cotizacion">
+                                    Subtotal
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="subtotal-cotizacion"
+                                    name="subtotal"
+                                    value="0"
+                                    readonly
+                                >
+                            </div>
+
+                            <div class="campo-orden">
+                                <label for="abono-cotizacion">Abono</label>
+
+                                <input
+                                    type="number"
+                                    id="abono-cotizacion"
+                                    name="abono"
+                                    min="0"
+                                    step="0.01"
+                                    value="0"
+                                    aria-describedby="error-abono-cotizacion"
+                                >
+
+                                <p
+                                    class="error-acceso"
+                                    id="error-abono-cotizacion"
+                                    aria-live="polite"
+                                    hidden
+                                ></p>
+                            </div>
+
+                            <div class="campo-orden">
+                                <label for="saldo-cotizacion">
+                                    Saldo pendiente
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="saldo-cotizacion"
+                                    name="saldo"
+                                    value="0"
+                                    readonly
+                                >
+                            </div>
+                        </fieldset>
+
+                        <div class="acciones-orden">
+                            <button
+                                class="boton-guardar-orden"
+                                id="btn-guardar-cotizacion"
+                                type="submit"
+                                disabled
+                            >
+                                Guardar
+                            </button>
+
+                            <button
+                                class="boton-cancelar-orden"
+                                id="btn-cancelar-cotizacion"
+                                type="button"
+                                disabled
+                            >
+                                Cancelar
+                            </button>
+
+                            <button
+                                class="boton-whatsapp-orden"
+                                id="btn-whatsapp-cotizacion"
+                                type="button"
+                                disabled
+                            >
+                                Enviar a WhatsApp
+                            </button>
+                        </div>
+
+                        <p
+                            class="mensaje-formulario"
+                            id="mensaje-formulario-cotizacion"
+                            role="status"
+                        ></p>
+                    </section>
+                </div>
+            </form>
+        </section>
+
+        <!-- Pantalla de búsqueda de cotizaciones -->
+
+        <section
+            class="pantalla"
+            id="pantalla-buscar-cotizacion"
+            aria-labelledby="titulo-buscar-cotizacion"
+            hidden
+        >
+            <div class="encabezado-orden">
+                <img
+                    class="logo-orden"
+                    src="Imagenes/logo.jpg"
+                    alt=""
+                    width="64"
+                    height="64"
+                >
+
+                <h2 id="titulo-buscar-cotizacion">
+                    Buscar cotización
+                </h2>
+            </div>
+
+            <!-- Buscador y acciones -->
+
+            <form
+                class="formulario-validable formulario-buscar-orden"
+                id="formulario-buscar-cotizacion"
+                novalidate
+            >
+                <div class="campo-busqueda-orden">
+                    <label for="criterio-buscar-cotizacion">
+                        N.º de cotización
+                    </label>
+
+                    <div class="entrada-validable entrada-busqueda-orden">
+                        <input
+                            type="text"
+                            id="criterio-buscar-cotizacion"
+                            name="numero-cotizacion"
+                            inputmode="numeric"
+                            pattern="[0-9]*"
+                            autocomplete="off"
+                            enterkeyhint="search"
+                            aria-describedby="error-criterio-buscar-cotizacion"
+                        >
+
+                        <button
+                            class="boton-limpiar-busqueda"
+                            id="btn-limpiar-busqueda-cotizacion"
+                            type="button"
+                            aria-label="Limpiar el número de cotización"
+                            aria-controls="criterio-buscar-cotizacion"
+                            hidden
+                        >
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+
+                    <p
+                        class="error-acceso"
+                        id="error-criterio-buscar-cotizacion"
+                        aria-live="polite"
+                        hidden
+                    ></p>
+                </div>
+
+                <div class="acciones-busqueda-orden">
+                    <button
+                        class="boton-whatsapp-orden"
+                        id="btn-ejecutar-busqueda-cotizacion"
+                        type="submit"
+                        disabled
+                    >
+                        Buscar
+                    </button>
+
+                    <button
+                        class="boton-cancelar-orden"
+                        id="btn-cancelar-busqueda-cotizacion"
+                        type="button"
+                        disabled
+                    >
+                        Cancelar
+                    </button>
+                </div>
+            </form>
+
+            <!-- Mensaje de resultados -->
+
+            <p
+                class="mensaje-formulario mensaje-busqueda-orden"
+                id="mensaje-busqueda-cotizacion"
+                role="status"
+                aria-atomic="true"
+            ></p>
+
+            <!-- Tabla de cotizaciones -->
+
+            <div
+                class="contenedor-resultados-orden"
+                id="contenedor-resultados-cotizacion"
+            >
+                <table class="tabla-ordenes tabla-resultados-cotizacion">
+                    <caption class="solo-lectores">
+                        Resultados de la búsqueda de cotizaciones
+                        y sus órdenes de trabajo relacionadas
+                    </caption>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">N.º de cotización</th>
+                            <th scope="col">N.º de orden</th>
+                            <th scope="col">Fecha</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Teléfono</th>
+                            <th scope="col">NIT</th>
+                            <th scope="col">Ítems</th>
+                            <th scope="col">Acción</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="cuerpo-resultados-cotizacion"></tbody>
+                </table>
+            </div>
+
+            <!-- Paginación: se mantiene oculta hasta conectarla -->
+
+            <nav
+                class="paginacion-ordenes"
+                id="paginacion-resultados-cotizacion"
+                aria-label="Páginas de resultados de cotizaciones"
+                hidden
+            >
+                <button
+                    class="boton-paginacion-orden"
+                    id="btn-pagina-anterior-cotizacion"
+                    type="button"
+                    disabled
+                >
+                    Anterior
+                </button>
+
+                <p
+                    class="informacion-paginacion-orden"
+                    id="informacion-paginacion-cotizacion"
+                    role="status"
+                    aria-atomic="true"
+                ></p>
+
+                <button
+                    class="boton-paginacion-orden"
+                    id="btn-pagina-siguiente-cotizacion"
+                    type="button"
+                    disabled
+                >
+                    Siguiente
+                </button>
+            </nav>
+        </section>
+
+        <!-- Plantilla de cada resultado de cotización -->
+
+        <template id="plantilla-resultado-cotizacion">
+            <tr class="fila-resultado-orden fila-resultado-cotizacion">
+                <th
+                    scope="row"
+                    data-columna="numero-cotizacion"
+                ></th>
+
+                <td data-columna="numero-orden"></td>
+                <td data-columna="fecha"></td>
+                <td data-columna="cliente"></td>
+                <td data-columna="telefono"></td>
+                <td data-columna="nit"></td>
+                <td data-columna="items"></td>
+
+                <td>
+                    <div class="acciones-fila-orden">
+                        <button
+                            class="boton-whatsapp-orden"
+                            data-accion="abrir-cotizacion"
+                            type="button"
+                            disabled
+                        >
+                            Ver / editar
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        </template>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

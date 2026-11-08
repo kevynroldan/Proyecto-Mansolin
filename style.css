@@ -1,0 +1,2256 @@
+/* Estilos generales */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #183642;
+}
+
+/* Bloquear el desplazamiento mientras el menú está abierto */
+
+body.menu-abierto {
+    overflow: hidden;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+/* Mantener ocultas las pantallas que tienen el atributo hidden */
+
+[hidden] {
+    display: none !important;
+}
+
+/* Encabezado principal */
+
+body > header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    min-height: 84px;
+    padding: 8px 26px;
+    background-color: #29998d;
+    color: #ffffff;
+}
+
+body > header img {
+    display: block;
+    width: 68px;
+    height: 68px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+body > header h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Botón hamburguesa */
+
+.boton-hamburguesa {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.boton-hamburguesa span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #ffffff;
+}
+
+.boton-hamburguesa:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.boton-hamburguesa:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 3px;
+}
+
+/* Menú lateral del sistema */
+
+.menu-lateral {
+    position: fixed;
+    inset: 0 auto 0 0;
+    width: 280px;
+    max-width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    border: none;
+    background-color: #ffffff;
+    color: #183642;
+    box-shadow: 4px 0 14px rgba(0, 0, 0, 0.2);
+}
+
+/* Fondo oscurecido detrás del menú */
+
+.menu-lateral::backdrop {
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+/* Encabezado del menú */
+
+.encabezado-menu {
+    position: relative;
+    padding: 16px 16px 18px;
+    background-color: #29998d;
+    color: #ffffff;
+}
+
+/* Botón para cerrar el menú */
+
+.boton-cerrar-menu {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: none;
+    border-radius: 6px;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.boton-cerrar-menu:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.boton-cerrar-menu:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}
+
+/* Logo del menú */
+
+.logo-menu {
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 16px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+/* Nombre y correo del usuario */
+
+.datos-usuario-menu {
+    margin-bottom: 16px;
+}
+
+.datos-usuario-menu p {
+    margin: 0;
+    overflow-wrap: anywhere;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+#nombre-usuario-menu {
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+/* Fecha de entrada, reloj y acceso anterior */
+
+.datos-sesion-menu p {
+    margin: 0 0 8px;
+    font-size: 12px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.datos-sesion-menu p:last-child {
+    margin-bottom: 0;
+}
+
+/* Rol del usuario */
+
+.rol-menu {
+    padding: 10px 12px;
+    background-color: #b0c4b1;
+}
+
+.rol-menu p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* Navegación y grupos de opciones */
+
+.navegacion-menu {
+    padding: 12px 8px 16px;
+}
+
+.grupo-menu {
+    margin-bottom: 16px;
+}
+
+.grupo-menu:last-child {
+    margin-bottom: 0;
+}
+
+.grupo-menu h3 {
+    margin: 10px 10px 6px;
+    color: #526b70;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* Listas de opciones */
+
+.lista-menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Botones de navegación */
+
+.opcion-menu {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: transparent;
+    color: #327b78;
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: left;
+    overflow-wrap: anywhere;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* Opción actual y estados de interacción */
+
+.opcion-menu[aria-current="page"],
+.opcion-menu:hover {
+    background-color: #e2f3ef;
+}
+
+.opcion-menu:focus-visible {
+    background-color: #e2f3ef;
+    outline: 2px solid #287b78;
+    outline-offset: -2px;
+}
+
+/* Área principal */
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Tarjeta de inicio, registro y consulta */
+
+.tarjeta-acceso {
+    --acceso-alto-campo: 42px;
+    --acceso-relleno-campo: 10px;
+    --acceso-borde: #929d9d;
+
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    padding: 20px 26px;
+    border: 1px solid var(--acceso-borde);
+    border-radius: 22px;
+    background-color: #f5fcfb;
+}
+
+.tarjeta-acceso > h2 {
+    margin: 0 0 6px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.descripcion-empresa {
+    margin: 0;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #ccddda;
+    color: #327b78;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Ajustes para pantallas pequeñas */
+
+@media (max-width: 600px) {
+    main {
+        padding: 24px 16px;
+    }
+
+    .tarjeta-acceso {
+        padding: 18px;
+        border-radius: 20px;
+    }
+}
+
+/* Opciones de inicio, registro y consulta */
+
+.opciones-acceso {
+    display: flex;
+    margin-top: 14px;
+    margin-bottom: 18px;
+    border-bottom: 2px solid #ccddda;
+}
+
+.opciones-acceso button {
+    flex: 1;
+    position: relative;
+    padding: 10px 6px;
+    border: none;
+    background-color: transparent;
+    color: #626262;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.4;
+    cursor: pointer;
+}
+
+.opciones-acceso button:hover {
+    color: #007d8a;
+}
+
+.opciones-acceso button:focus-visible {
+    outline: 3px solid #007d8a;
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+/* Opción seleccionada */
+
+.opciones-acceso button.activo {
+    color: #183642;
+}
+
+.opciones-acceso button.activo::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -2px;
+    left: 0;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #007d8a;
+}
+
+/* Ajustes para pantallas pequeñas */
+
+@media (max-width: 600px) {
+    .opciones-acceso button {
+        padding: 12px 4px;
+        font-size: 14px;
+    }
+}
+
+/* Botón para seleccionar el tipo de usuario */
+
+.icono-usuario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 10px;
+    padding: 10px;
+    border: 1px solid #29998d;
+    border-radius: 50%;
+    background-color: #29998d;
+    cursor: pointer;
+}
+
+.icono-usuario img {
+    display: block;
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.icono-usuario:hover {
+    background-color: #247e75;
+    border-color: #1D758B;
+}
+
+.icono-usuario:focus-visible {
+    outline: 3px solid #007d8a;
+    outline-offset: 4px;
+}
+
+/* Mensaje debajo del icono */
+
+.indicacion-acceso {
+    margin: 0 0 16px;
+    color: #327b78;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Campos y validación de inicio de sesión y registro */
+
+.formulario-validable .campo-formulario {
+    margin-bottom: 12px;
+}
+
+.formulario-validable .campo-formulario label {
+    display: block;
+    margin-bottom: 5px;
+    color: #327b78;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.asterisco-obligatorio {
+    color: #a51d25;
+}
+
+.formulario-validable .entrada-validable {
+    position: relative;
+    min-width: 0;
+}
+
+.formulario-validable .icono-campo {
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    width: 24px;
+    height: 24px;
+    transform: translateY(-50%);
+    filter: brightness(0) opacity(70%);
+    pointer-events: none;
+}
+
+.formulario-validable .campo-formulario input {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    min-height: var(--acceso-alto-campo);
+    padding: var(--acceso-relleno-campo) 60px
+        var(--acceso-relleno-campo) 18px;
+    border: 1px solid var(--acceso-borde);
+    border-radius: 22px;
+    background-color: #dddddd;
+    color: #183642;
+    font: inherit;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Reservar espacio a la izquierda solo cuando existe un icono */
+
+.formulario-validable .icono-campo + input {
+    padding-left: 54px;
+}
+
+.formulario-validable .campo-formulario input::placeholder {
+    color: #626262;
+    opacity: 1;
+}
+
+.formulario-validable .campo-formulario input:focus-visible {
+    outline: 2px solid #007d8a;
+    outline-offset: 2px;
+}
+
+.formulario-validable .entrada-validable select {
+    appearance: none;
+    padding-right: 90px;
+    background-image: url("Imagenes/flecha-abajo/flecha-abajo.svg");
+    background-repeat: no-repeat;
+    background-position: right 18px center;
+    background-size: 16px 16px;
+}
+
+.formulario-validable [aria-invalid="true"] {
+    border-color: #a51d25;
+}
+
+.formulario-validable .boton-ayuda-acceso {
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    transform: translateY(-50%);
+    border: 2px solid #a51d25;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: #a51d25;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.formulario-validable .campo-perfil .boton-ayuda-acceso {
+    right: 44px;
+}
+
+.formulario-validable .boton-ayuda-acceso:focus-visible {
+    outline: 3px solid #007d8a;
+    outline-offset: 3px;
+}
+
+.formulario-validable .error-acceso,
+.formulario-validable .ayuda-acceso,
+.formulario-validable .nota-obligatorios {
+    margin: 6px 0 0;
+    font-size: 13px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.formulario-validable .error-acceso {
+    color: #a51d25;
+}
+
+.formulario-validable .ayuda-acceso {
+    padding: 10px 12px;
+    border: 1px solid #ccddda;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #526b70;
+}
+
+.formulario-validable .nota-obligatorios {
+    margin-bottom: 14px;
+    color: #526b70;
+}
+
+/* Etiquetas disponibles para lectores de pantalla */
+
+.solo-lectores {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Opción para recuperar la contraseña */
+
+.opciones-contrasena {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 14px;
+}
+
+.enlace-recuperar {
+    padding: 8px 0;
+    border: none;
+    background-color: transparent;
+    color: #327b78;
+    font-size: 14px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    cursor: pointer;
+}
+
+.enlace-recuperar:hover {
+    color: #183642;
+}
+
+.enlace-recuperar:focus-visible {
+    outline: 3px solid #007d8a;
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+/* Botones principales */
+
+.boton-principal {
+    display: block;
+    width: 100%;
+    min-height: var(--acceso-alto-campo, 54px);
+    padding: var(--acceso-relleno-campo, 14px) 20px;
+    border: 1px solid #247e75;
+    border-radius: 22px;
+    background-color: #29998d;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.4;
+    text-align: center;
+    cursor: pointer;
+}
+
+.boton-principal:hover {
+    background-color: #247e75;
+}
+
+.boton-principal:focus-visible {
+    outline: 3px solid #007d8a;
+    outline-offset: 3px;
+}
+
+/* Selector de tipo de usuario */
+
+.campo-perfil {
+    margin-bottom: 14px;
+}
+
+.campo-perfil label {
+    display: block;
+    margin-bottom: 5px;
+    color: #327b78;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.campo-perfil select {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    min-height: var(--acceso-alto-campo);
+    padding: var(--acceso-relleno-campo) 18px;
+    border: 1px solid var(--acceso-borde);
+    border-radius: 22px;
+    background-color: #dddddd;
+    color: #183642;
+    font: inherit;
+    font-size: 14px;
+    line-height: 1.4;
+    cursor: pointer;
+}
+
+.campo-perfil select:focus-visible {
+    outline: 3px solid #007d8a;
+    outline-offset: 3px;
+}
+
+/* Instrucciones de consulta */
+
+.indicacion-consulta {
+    margin: 0 0 18px;
+    color: #327b78;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Campo del número de orden */
+
+#formulario-consulta label {
+    display: block;
+    margin-bottom: 5px;
+    color: #327b78;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+#formulario-consulta input {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    min-height: var(--acceso-alto-campo);
+    margin-bottom: 14px;
+    padding: var(--acceso-relleno-campo) 18px;
+    border: 1px solid var(--acceso-borde);
+    border-radius: 22px;
+    background-color: #dddddd;
+    color: #183642;
+    font: inherit;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+#formulario-consulta input::placeholder {
+    color: #626262;
+    opacity: 1;
+}
+
+#formulario-consulta input:focus-visible {
+    outline: 2px solid #007d8a;
+    outline-offset: 2px;
+}
+
+/* Resultado de la consulta */
+
+#resultado-consulta {
+    margin-top: 24px;
+    padding: 20px;
+    border: 1px solid #ccddda;
+    border-radius: 20px;
+    background-color: #ffffff;
+}
+
+#resultado-consulta h2 {
+    margin: 0 0 12px;
+    font-size: 20px;
+}
+
+#mensaje-consulta {
+    margin: 0;
+    color: #327b78;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+/* Pantallas de recuperación y nueva contraseña */
+
+#pantalla-recuperar,
+#pantalla-restablecer {
+    width: 100%;
+    max-width: 540px;
+    margin: auto;
+    padding-top: 0;
+}
+
+.logo-recuperacion {
+    display: block;
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 24px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+/* Tarjeta compartida */
+
+.tarjeta-recuperacion {
+    padding: 24px;
+    border: 1px solid #888888;
+    border-radius: 36px;
+    background-color: #f5fcfb;
+}
+
+.tarjeta-recuperacion h2 {
+    margin: 0 0 18px;
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+.indicacion-restablecer {
+    margin: 0 0 24px;
+    color: #327b78;
+    line-height: 1.5;
+}
+
+/* Campos de correo y nueva contraseña */
+
+.campo-recuperacion {
+    margin-bottom: 20px;
+}
+
+.campo-recuperacion label {
+    display: block;
+    margin-bottom: 8px;
+    color: #327b78;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.campo-recuperacion input {
+    display: block;
+    width: 100%;
+    min-height: 54px;
+    padding: 14px 18px;
+    border: 1px solid #888888;
+    border-radius: 28px;
+    background-color: #dddddd;
+    color: #183642;
+}
+
+.campo-recuperacion input::placeholder {
+    color: #626262;
+    opacity: 1;
+}
+
+.campo-recuperacion input:focus-visible {
+    outline: 3px solid #007d8a;
+    outline-offset: 3px;
+}
+
+/* Botón debajo de la tarjeta */
+
+#btn-volver-inicio {
+    width: auto;
+    max-width: 100%;
+    margin-top: 18px;
+    padding-right: 24px;
+    padding-left: 24px;
+}
+
+/* Ajustes para pantallas pequeñas */
+
+@media (max-width: 600px) {
+    .logo-recuperacion {
+        margin-bottom: 20px;
+    }
+
+    .tarjeta-recuperacion {
+        padding: 24px 20px;
+        border-radius: 28px;
+    }
+}
+
+/* Panel principal */
+
+#pantalla-panel {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+/* Logo y bienvenida */
+
+.bienvenida-panel {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.logo-panel {
+    display: block;
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.bienvenida-panel h2 {
+    margin: 0;
+    font-size: 24px;
+    line-height: 1.3;
+}
+
+/* Distribución de las nueve opciones */
+
+.opciones-panel {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 32px 48px;
+    padding: 28px 32px;
+    border: 1px solid #888888;
+    border-radius: 28px;
+    background-color: #f5fcfb;
+}
+
+/* Botones del panel */
+
+.opcion-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    min-width: 0;
+    padding: 4px;
+    border: none;
+    border-radius: 16px;
+    background-color: transparent;
+    color: #327b78;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+/* Estados de los botones */
+
+.opcion-panel:hover {
+    background-color: #e2f3ef;
+}
+
+.opcion-panel:focus-visible {
+    background-color: #e2f3ef;
+    outline: 2px solid #287b78;
+    outline-offset: 3px;
+}
+
+/* Círculos de los iconos */
+
+.icono-panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #29998d;
+}
+
+/* Texto de las opciones */
+
+.texto-opcion-panel {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.opcion-panel:hover .texto-opcion-panel {
+    color: #183642;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* Colores de las opciones */
+
+#btn-crear-orden .icono-panel {
+    background-color: #06a4d6;
+}
+
+#btn-buscar-orden .icono-panel {
+    background-color: #f3b410;
+}
+
+#btn-crear-factura .icono-panel {
+    background-color: #ff4c27;
+}
+
+#btn-buscar-factura .icono-panel {
+    background-color: #e93e79;
+}
+
+#btn-crear-cotizacion .icono-panel {
+    background-color: #1b4363;
+}
+
+#btn-buscar-cotizacion .icono-panel {
+    background-color: #197b32;
+}
+
+#btn-crear-cuenta-cobro .icono-panel {
+    background-color: #0a5b59;
+}
+
+#btn-buscar-cuenta-cobro .icono-panel {
+    background-color: #335bb5;
+}
+
+#btn-ordenes-trabajo .icono-panel {
+    background-color: #203242;
+}
+
+/* Ajustes para tabletas */
+
+@media (max-width: 900px) {
+    .opciones-panel {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 36px 24px;
+    }
+}
+
+/* Ajustes para celulares */
+
+@media (max-width: 600px) {
+    .bienvenida-panel {
+        gap: 16px;
+    }
+
+    .logo-panel {
+        width: 56px;
+        height: 56px;
+    }
+
+    .bienvenida-panel h2 {
+        font-size: 22px;
+    }
+
+    .opciones-panel {
+        gap: 28px 16px;
+        padding: 28px 16px;
+    }
+
+    .icono-panel {
+        width: 64px;
+        height: 64px;
+    }
+
+    .texto-opcion-panel {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 360px) {
+    .opciones-panel {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Medidas compartidas de las pantallas de documentos */
+
+#pantalla-crear-orden,
+#pantalla-buscar-orden,
+#pantalla-crear-factura,
+#pantalla-buscar-factura,
+#pantalla-crear-cotizacion,
+#pantalla-buscar-cotizacion {
+    --orden-separacion: 12px;
+    --orden-relleno: 20px;
+    --orden-alto-campo: 38px;
+    --orden-alto-observaciones: 58px;
+    --orden-tamano-etiqueta: 13px;
+    --orden-tamano-titulo: 26px;
+    --orden-tamano-logo: 56px;
+
+    width: 100%;
+    max-width: 1760px;
+    margin: 0 auto;
+    padding: 4px 0 12px;
+}
+
+/* Logo y título de la pantalla */
+
+.encabezado-orden {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+.logo-orden {
+    display: block;
+    flex-shrink: 0;
+    width: var(--orden-tamano-logo);
+    height: var(--orden-tamano-logo);
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.encabezado-orden h2 {
+    margin: 0;
+    color: #183642;
+    font-size: var(--orden-tamano-titulo);
+    line-height: 1.25;
+}
+
+/* Dos tarjetas: datos y controles */
+
+.tarjetas-orden {
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    align-items: stretch;
+    gap: 22px;
+}
+
+.tarjeta-orden {
+    min-width: 0;
+    padding: var(--orden-relleno);
+    border: 1px solid #929d9d;
+    border-radius: 24px;
+    background-color: #f5fcfb;
+}
+
+/* Distribución de los campos de la tarjeta izquierda */
+
+.campos-orden {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: var(--orden-separacion) 18px;
+}
+
+.campo-orden {
+    min-width: 0;
+}
+
+.campo-orden-completo {
+    grid-column: 1 / -1;
+}
+
+.campo-orden label {
+    display: block;
+    margin-bottom: 4px;
+    color: #327b78;
+    font-size: var(--orden-tamano-etiqueta);
+    line-height: 1.4;
+}
+
+/* Entradas y áreas de texto */
+
+.campo-orden input,
+.campo-orden textarea {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    min-height: var(--orden-alto-campo);
+    padding: 8px 13px;
+    border: 1px solid #929d9d;
+    border-radius: 22px;
+    background-color: #dddddd;
+    color: #183642;
+    font: inherit;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+/* Reservar espacio para el botón de ayuda */
+
+.campo-orden .entrada-validable input,
+.campo-orden .entrada-validable textarea {
+    padding-right: 54px;
+}
+
+.campo-orden textarea {
+    min-height: var(--orden-alto-observaciones);
+    border-radius: 16px;
+    resize: vertical;
+}
+
+.campo-orden input::placeholder,
+.campo-orden textarea::placeholder {
+    color: #626262;
+    opacity: 1;
+}
+
+.campo-orden input:focus-visible,
+.campo-orden textarea:focus-visible {
+    outline: 2px solid #007d8a;
+    outline-offset: 2px;
+}
+
+.campo-orden input[readonly] {
+    color: #43565d;
+}
+
+/* Tarjeta derecha */
+
+.tarjeta-controles-orden {
+    display: flex;
+    flex-direction: column;
+    gap: var(--orden-separacion);
+}
+
+/* Estados del servicio */
+
+.estados-orden {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.estado-orden {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 38px;
+    padding: 8px 12px;
+    border-radius: 20px;
+    background-color: #20aa99;
+    color: #183642;
+    font-size: 12px;
+    line-height: 1.4;
+    cursor: pointer;
+}
+
+.estado-orden input {
+    flex-shrink: 0;
+    width: 17px;
+    height: 17px;
+    margin: 0;
+    accent-color: #007d8a;
+}
+
+.estado-orden input:focus-visible {
+    outline: 2px solid #183642;
+    outline-offset: 2px;
+}
+
+/* Apariencia compartida de los botones de la orden */
+
+.boton-impresion-orden,
+.boton-guardar-orden,
+.boton-cancelar-orden,
+.boton-whatsapp-orden {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 38px;
+    padding: 8px 16px;
+    border: 1px solid #587478;
+    font: inherit;
+    font-size: 13px;
+    line-height: 1.4;
+    text-align: center;
+    cursor: pointer;
+}
+
+.acciones-impresion-orden,
+.acciones-orden {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.boton-impresion-orden {
+    border-radius: 4px;
+    background-color: #ffe28a;
+    color: #183642;
+}
+
+.boton-guardar-orden,
+.boton-cancelar-orden,
+.boton-whatsapp-orden {
+    border-radius: 22px;
+}
+
+.boton-guardar-orden {
+    background-color: #007d91;
+    color: #ffffff;
+}
+
+.boton-cancelar-orden {
+    background-color: #ed4025;
+    color: #ffffff;
+}
+
+.boton-whatsapp-orden {
+    background-color: #20aa99;
+    color: #183642;
+}
+
+/* Interacción de botones habilitados */
+
+.acciones-impresion-orden button:enabled:hover,
+.acciones-orden button:enabled:hover {
+    filter: brightness(0.92);
+}
+
+.acciones-impresion-orden button:focus-visible,
+.acciones-orden button:focus-visible {
+    outline: 2px solid #007d8a;
+    outline-offset: 3px;
+}
+
+.estados-orden:disabled .estado-orden,
+.estado-orden input:disabled,
+.acciones-impresion-orden button:disabled,
+.acciones-orden button:disabled {
+    cursor: not-allowed;
+}
+
+.acciones-impresion-orden button:disabled,
+.acciones-orden button:disabled {
+    opacity: 0.65;
+}
+
+/* Selección y vista previa de imágenes */
+
+.imagenes-orden {
+    display: grid;
+    gap: 10px;
+    min-width: 0;
+}
+
+.campo-orden input[type="file"] {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-size: 12px;
+}
+
+.campo-orden input[type="file"]::file-selector-button {
+    margin-right: 8px;
+    padding: 4px 8px;
+    border: 1px solid #929d9d;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #183642;
+    font: inherit;
+    cursor: pointer;
+}
+
+.vista-previa-imagen-orden {
+    min-width: 0;
+    padding: 10px;
+    border: 1px solid #ccddda;
+    border-radius: 12px;
+    background-color: #ffffff;
+}
+
+.galeria-imagenes-orden {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.miniatura-imagen-orden {
+    min-width: 0;
+    margin: 0;
+}
+
+.miniatura-imagen-orden img {
+    display: block;
+    width: 100%;
+    height: 62px;
+    padding: 3px;
+    border: 1px solid #ccddda;
+    border-radius: 6px;
+    background-color: #f5fcfb;
+    object-fit: contain;
+}
+
+.miniatura-imagen-orden figcaption,
+.estado-imagenes-orden {
+    margin: 4px 0 0;
+    color: #526b70;
+    font-size: 11px;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+/* Valores alineados a la derecha, como en la referencia */
+
+.valores-orden {
+    display: grid;
+    gap: var(--orden-separacion);
+    width: 56%;
+    min-width: 0;
+    margin: 0 0 0 auto;
+    padding: 0;
+    border: none;
+}
+
+/* Mensaje general de la orden */
+
+.mensaje-formulario {
+    margin: 0;
+    color: #327b78;
+    font-size: 13px;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+.mensaje-formulario:empty {
+    display: none;
+}
+
+/* Distribución más compacta en computadores de menor altura */
+
+@media (min-width: 1101px) and (max-height: 800px) {
+    #pantalla-crear-orden,
+    #pantalla-buscar-orden,
+    #pantalla-crear-factura,
+    #pantalla-buscar-factura,
+    #pantalla-crear-cotizacion,
+    #pantalla-buscar-cotizacion {
+        --orden-separacion: 8px;
+        --orden-relleno: 16px;
+        --orden-alto-campo: 34px;
+        --orden-alto-observaciones: 48px;
+        --orden-tamano-etiqueta: 12px;
+        --orden-tamano-titulo: 23px;
+        --orden-tamano-logo: 44px;
+    }
+
+    .encabezado-orden {
+        margin-bottom: 12px;
+    }
+}
+
+/* Tabletas y ventanas estrechas */
+
+@media (max-width: 1100px) {
+    .tarjetas-orden {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .valores-orden {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        width: 100%;
+    }
+}
+
+/* Celulares */
+
+@media (max-width: 600px) {
+    #pantalla-crear-orden,
+    #pantalla-buscar-orden,
+    #pantalla-crear-factura,
+    #pantalla-buscar-factura,
+    #pantalla-crear-cotizacion,
+    #pantalla-buscar-cotizacion {
+        --orden-relleno: 16px;
+        --orden-tamano-titulo: 21px;
+        --orden-tamano-logo: 44px;
+    }
+
+    .encabezado-orden {
+        gap: 12px;
+        margin-bottom: 14px;
+    }
+
+    .tarjeta-orden {
+        border-radius: 18px;
+    }
+
+    .campos-orden,
+    .valores-orden {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .acciones-impresion-orden,
+    .acciones-orden {
+        flex-direction: column;
+    }
+
+    .acciones-impresion-orden button,
+    .acciones-orden button {
+        width: 100%;
+    }
+
+    .galeria-imagenes-orden {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Pantalla de búsqueda de órdenes de trabajo */
+
+/* Buscador y botones */
+
+.formulario-buscar-orden {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+    gap: 14px;
+    margin-bottom: 14px;
+}
+
+.campo-busqueda-orden {
+    min-width: 0;
+}
+
+.campo-busqueda-orden label {
+    display: block;
+    margin-bottom: 5px;
+    color: #327b78;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.entrada-busqueda-orden input {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    min-height: 42px;
+    padding: 10px 56px 10px 18px;
+    border: 1px solid #929d9d;
+    border-radius: 24px;
+    background-color: #dddddd;
+    color: #183642;
+    font: inherit;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Contorno fino al seleccionar el campo */
+
+.entrada-busqueda-orden input:focus {
+    outline: 1px solid #29998d;
+    outline-offset: 3px;
+}
+
+/* Limpiar el campo: botón ubicado a la derecha */
+
+.boton-limpiar-busqueda {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    transform: translateY(-50%);
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    color: #526b70;
+    font: inherit;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.boton-limpiar-busqueda:hover {
+    background-color: #c7d8d5;
+    color: #183642;
+}
+
+.boton-limpiar-busqueda:focus-visible {
+    outline: 2px solid #007d8a;
+    outline-offset: 1px;
+}
+
+/* Alinear las acciones con el campo, debajo de su etiqueta */
+
+.acciones-busqueda-orden {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 23px;
+}
+
+.acciones-busqueda-orden button {
+    min-height: 42px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.acciones-busqueda-orden button:enabled:hover {
+    filter: brightness(0.92);
+}
+
+.acciones-busqueda-orden button:focus-visible {
+    outline: 2px solid #007d8a;
+    outline-offset: 3px;
+}
+
+.acciones-busqueda-orden button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+/* Mensajes de búsqueda */
+
+.mensaje-busqueda-orden:not(:empty) {
+    margin-bottom: 12px;
+}
+
+/* Contenedores de las tablas */
+
+.contenedor-resultados-orden,
+.contenedor-tabla-dialogo {
+    min-width: 0;
+    border: 1px solid #929d9d;
+    border-radius: 22px;
+    background-color: #f5fcfb;
+    overflow-x: auto;
+}
+
+.contenedor-resultados-orden {
+    min-height: clamp(210px, 40vh, 420px);
+}
+
+/* Tabla compartida por resultados y ventana flotante */
+
+.tabla-ordenes {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    color: #183642;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.tabla-ordenes th,
+.tabla-ordenes td {
+    padding: 12px 14px;
+    text-align: left;
+    vertical-align: middle;
+    overflow-wrap: anywhere;
+}
+
+.tabla-ordenes thead th {
+    border-bottom: 1px solid #bdcccc;
+    background-color: #dddddd;
+    font-weight: 500;
+}
+
+.tabla-ordenes thead th + th {
+    border-left: 1px solid #bdcccc;
+}
+
+.tabla-ordenes thead th:first-child {
+    border-top-left-radius: 21px;
+}
+
+.tabla-ordenes thead th:last-child {
+    border-top-right-radius: 21px;
+}
+
+.tabla-ordenes tbody th {
+    font-weight: 400;
+}
+
+.tabla-ordenes tbody tr + tr > * {
+    border-top: 1px solid #bdcccc;
+}
+
+/* Distribución de columnas de búsqueda de órdenes */
+
+#pantalla-buscar-orden .tabla-ordenes {
+    min-width: 860px;
+}
+
+#pantalla-buscar-orden thead th:nth-child(1) {
+    width: 8%;
+}
+
+#pantalla-buscar-orden thead th:nth-child(2) {
+    width: 12%;
+}
+
+#pantalla-buscar-orden thead th:nth-child(3) {
+    width: 21%;
+}
+
+#pantalla-buscar-orden thead th:nth-child(4) {
+    width: 14%;
+}
+
+#pantalla-buscar-orden thead th:nth-child(5) {
+    width: 15%;
+}
+
+#pantalla-buscar-orden thead th:nth-child(6) {
+    width: 7%;
+}
+
+#pantalla-buscar-orden thead th:nth-child(7) {
+    width: 23%;
+}
+
+/* Distribución compartida de columnas: facturas y cotizaciones */
+
+.tabla-resultados-factura,
+.tabla-resultados-cotizacion {
+    min-width: 980px;
+}
+
+.tabla-resultados-factura thead th:nth-child(1),
+.tabla-resultados-cotizacion thead th:nth-child(1) {
+    width: 11%;
+}
+
+.tabla-resultados-factura thead th:nth-child(2),
+.tabla-resultados-cotizacion thead th:nth-child(2) {
+    width: 11%;
+}
+
+.tabla-resultados-factura thead th:nth-child(3),
+.tabla-resultados-cotizacion thead th:nth-child(3) {
+    width: 11%;
+}
+
+.tabla-resultados-factura thead th:nth-child(4),
+.tabla-resultados-cotizacion thead th:nth-child(4) {
+    width: 19%;
+}
+
+.tabla-resultados-factura thead th:nth-child(5),
+.tabla-resultados-cotizacion thead th:nth-child(5) {
+    width: 13%;
+}
+
+.tabla-resultados-factura thead th:nth-child(6),
+.tabla-resultados-cotizacion thead th:nth-child(6) {
+    width: 13%;
+}
+
+.tabla-resultados-factura thead th:nth-child(7),
+.tabla-resultados-cotizacion thead th:nth-child(7) {
+    width: 6%;
+}
+
+.tabla-resultados-factura thead th:nth-child(8),
+.tabla-resultados-cotizacion thead th:nth-child(8) {
+    width: 16%;
+}
+
+/* Coincidencias conservadas durante las búsquedas */
+
+.fila-resultado-orden.es-coincidencia > * {
+    background-color: #e2f3ef;
+}
+
+/* Acciones de cada registro */
+
+.acciones-fila-orden {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 7px;
+}
+
+.acciones-fila-orden button,
+.contenedor-tabla-dialogo [data-accion="abrir-orden"] {
+    min-height: 34px;
+    padding: 6px 12px;
+    font-size: 12px;
+}
+
+/* Botones secundarios y de paginación */
+
+.boton-otras-ordenes,
+.boton-paginacion-orden {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    min-height: 34px;
+    padding: 6px 12px;
+    border: 1px solid #929d9d;
+    border-radius: 18px;
+    background-color: #ffffff;
+    color: #327b78;
+    font: inherit;
+    font-size: 12px;
+    line-height: 1.4;
+    text-align: center;
+    cursor: pointer;
+}
+
+.boton-otras-ordenes:enabled:hover,
+.boton-paginacion-orden:enabled:hover {
+    background-color: #e2f3ef;
+}
+
+.boton-otras-ordenes:focus-visible,
+.boton-paginacion-orden:focus-visible,
+.acciones-fila-orden [data-accion="abrir-orden"]:focus-visible,
+.contenedor-tabla-dialogo [data-accion="abrir-orden"]:focus-visible {
+    outline: 2px solid #007d8a;
+    outline-offset: 2px;
+}
+
+.boton-paginacion-orden:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Paginación */
+
+.paginacion-ordenes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.informacion-paginacion-orden {
+    margin: 0;
+    color: #526b70;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+/* Ventana flotante de otras órdenes del cliente */
+
+.dialogo-ordenes-cliente {
+    width: min(900px, calc(100% - 32px));
+    max-width: none;
+    max-height: 85vh;
+    max-height: 85dvh;
+    margin: auto;
+    padding: 22px;
+    border: 1px solid #929d9d;
+    border-radius: 22px;
+    background-color: #f5fcfb;
+    color: #183642;
+    overflow: auto;
+}
+
+.dialogo-ordenes-cliente::backdrop {
+    background-color: rgba(24, 54, 66, 0.4);
+}
+
+.encabezado-dialogo-ordenes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 10px;
+}
+
+.encabezado-dialogo-ordenes h2 {
+    margin: 0;
+    font-size: 21px;
+    line-height: 1.3;
+}
+
+.boton-cerrar-dialogo-ordenes {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    border: 1px solid #929d9d;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: #526b70;
+    font: inherit;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.boton-cerrar-dialogo-ordenes:hover {
+    background-color: #e2f3ef;
+}
+
+.boton-cerrar-dialogo-ordenes:focus-visible {
+    outline: 2px solid #007d8a;
+    outline-offset: 2px;
+}
+
+.datos-cliente-dialogo {
+    margin: 0 0 14px;
+    color: #327b78;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.dialogo-ordenes-cliente .mensaje-formulario:not(:empty) {
+    margin-bottom: 12px;
+}
+
+.contenedor-tabla-dialogo .tabla-ordenes {
+    min-width: 540px;
+}
+
+/* Computadores con menor altura disponible */
+
+@media (min-width: 1101px) and (max-height: 800px) {
+    #pantalla-buscar-orden .encabezado-orden {
+        margin-bottom: 12px;
+    }
+
+    .contenedor-resultados-orden {
+        min-height: 210px;
+    }
+
+    .tabla-ordenes th,
+    .tabla-ordenes td {
+        padding-top: 9px;
+        padding-bottom: 9px;
+    }
+}
+
+/* Tabletas y ventanas estrechas */
+
+@media (max-width: 900px) {
+    .formulario-buscar-orden {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 10px;
+    }
+
+    .acciones-busqueda-orden {
+        justify-content: flex-end;
+        padding-top: 0;
+    }
+}
+
+/* Celulares */
+
+@media (max-width: 600px) {
+    .acciones-busqueda-orden {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .acciones-busqueda-orden button {
+        width: 100%;
+    }
+
+    .contenedor-resultados-orden,
+    .contenedor-tabla-dialogo {
+        border-radius: 16px;
+    }
+
+    .tabla-ordenes thead th:first-child {
+        border-top-left-radius: 15px;
+    }
+
+    .tabla-ordenes thead th:last-child {
+        border-top-right-radius: 15px;
+    }
+
+    .paginacion-ordenes {
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .dialogo-ordenes-cliente {
+        padding: 16px;
+        border-radius: 18px;
+    }
+
+    .encabezado-dialogo-ordenes h2 {
+        font-size: 19px;
+    }
+}
+
+/* Pantalla de creación de facturas */
+
+/* Separación entre datos generales y detalle */
+
+.formulario-factura {
+    display: grid;
+    gap: 20px;
+}
+
+.tarjetas-detalle-factura {
+    align-items: start;
+}
+
+/* Información del documento cargado */
+
+.origen-factura {
+    margin: 12px 0 0;
+    padding-top: 10px;
+    border-top: 1px solid #ccddda;
+    color: #327b78;
+    font-size: 12px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+/* Tarjeta de ítems: crece según su contenido */
+
+.detalle-factura {
+    display: grid;
+    align-content: start;
+    gap: 14px;
+    min-height: 320px;
+}
+
+.contenedor-tabla-factura {
+    min-width: 0;
+    overflow-x: auto;
+}
+
+/* Tabla de cantidades, descripciones y valores */
+
+.tabla-items-factura {
+    width: 100%;
+    min-width: 540px;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 0;
+    color: #183642;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.tabla-items-factura th,
+.tabla-items-factura td {
+    padding: 8px;
+    text-align: left;
+    vertical-align: top;
+    overflow-wrap: anywhere;
+}
+
+/* Encabezados con bordes finos */
+
+.tabla-items-factura thead th {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    border-top: 1px solid #929d9d;
+    border-bottom: 1px solid #929d9d;
+    background-color: #dddddd;
+    font-weight: 500;
+}
+
+.tabla-items-factura thead th + th {
+    border-left: 1px solid #929d9d;
+}
+
+.tabla-items-factura thead th:first-child {
+    border-left: 1px solid #929d9d;
+    border-top-left-radius: 8px;
+}
+
+.tabla-items-factura thead th:last-child {
+    border-right: 1px solid #929d9d;
+    border-top-right-radius: 8px;
+}
+
+/* Dar más espacio a la descripción */
+
+.tabla-items-factura thead th:nth-child(1) {
+    width: 19%;
+}
+
+.tabla-items-factura thead th:nth-child(2) {
+    width: 46%;
+}
+
+.tabla-items-factura thead th:nth-child(3) {
+    width: 25%;
+}
+
+.tabla-items-factura thead th:nth-child(4) {
+    width: 10%;
+}
+
+/* Separación entre ítems */
+
+.tabla-items-factura tbody td {
+    border-bottom: 1px solid #ccddda;
+}
+
+/* Los campos conservan el borde fino compartido */
+
+.fila-item-factura .campo-orden input {
+    border-radius: 8px;
+}
+
+.fila-item-factura [data-campo-item="valor"] {
+    text-align: right;
+}
+
+/* Botón para eliminar un ítem */
+
+.boton-eliminar-item-factura {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    border: 1px solid #b73523;
+    border-radius: 50%;
+    background-color: #ed4025;
+    color: #ffffff;
+    font: inherit;
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.boton-eliminar-item-factura:hover {
+    background-color: #cf351e;
+}
+
+.boton-eliminar-item-factura:focus-visible {
+    outline: 2px solid #007d8a;
+    outline-offset: 2px;
+}
+
+/* Centrar la acción de cada fila */
+
+.tabla-items-factura .accion-item-factura {
+    text-align: center;
+}
+
+/* Agregar ítem en factura y cotización */
+
+#btn-agregar-item-factura,
+#btn-agregar-item-cotizacion {
+    justify-self: start;
+}
+
+#btn-agregar-item-factura:enabled:hover,
+#btn-agregar-item-cotizacion:enabled:hover {
+    filter: brightness(0.92);
+}
+
+#btn-agregar-item-factura:focus-visible,
+#btn-agregar-item-cotizacion:focus-visible {
+    outline: 2px solid #007d8a;
+    outline-offset: 2px;
+}
+
+#btn-agregar-item-factura:disabled,
+#btn-agregar-item-cotizacion:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+/* Tarjeta derecha */
+
+.controles-factura {
+    min-height: 320px;
+}
+
+.acciones-carga-factura {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.acciones-carga-factura button {
+    padding-right: 14px;
+    padding-left: 14px;
+}
+
+.acciones-carga-factura button:enabled:hover {
+    filter: brightness(0.92);
+}
+
+.acciones-carga-factura button:focus-visible {
+    outline: 2px solid #007d8a;
+    outline-offset: 2px;
+}
+
+.acciones-carga-factura button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+/* Importes alineados a la derecha */
+
+.valores-factura input {
+    text-align: right;
+}
+
+/* Campos numéricos de factura sin flechas de incremento */
+
+.formulario-factura input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.formulario-factura input[type="number"]::-webkit-inner-spin-button,
+.formulario-factura input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Mensaje de validación del detalle */
+
+#error-items-factura,
+#error-items-cotizacion {
+    margin: 0;
+}
+
+/* Confirmación antes de reemplazar datos */
+
+.dialogo-confirmacion-factura {
+    width: min(480px, calc(100% - 32px));
+    max-width: none;
+    max-height: 85vh;
+    max-height: 85dvh;
+    margin: auto;
+    padding: 22px;
+    border: 1px solid #929d9d;
+    border-radius: 20px;
+    background-color: #f5fcfb;
+    color: #183642;
+    overflow: auto;
+}
+
+.dialogo-confirmacion-factura::backdrop {
+    background-color: rgba(24, 54, 66, 0.4);
+}
+
+.dialogo-confirmacion-factura h2 {
+    margin: 0 0 12px;
+    font-size: 21px;
+    line-height: 1.3;
+}
+
+.dialogo-confirmacion-factura p {
+    margin: 0 0 18px;
+    color: #526b70;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.acciones-confirmacion-factura {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.acciones-confirmacion-factura button:enabled:hover {
+    filter: brightness(0.92);
+}
+
+.acciones-confirmacion-factura button:focus-visible {
+    outline: 2px solid #007d8a;
+    outline-offset: 2px;
+}
+
+/* Tabletas y ventanas estrechas */
+
+@media (max-width: 1100px) {
+    .detalle-factura,
+    .controles-factura {
+        min-height: 0;
+    }
+}
+
+/* Celulares */
+
+@media (max-width: 600px) {
+    .formulario-factura {
+        gap: 16px;
+    }
+
+    .acciones-carga-factura {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .acciones-carga-factura button {
+        width: 100%;
+    }
+
+    .dialogo-confirmacion-factura {
+        padding: 18px;
+        border-radius: 16px;
+    }
+
+    .acciones-confirmacion-factura {
+        flex-direction: column;
+    }
+
+    .acciones-confirmacion-factura button {
+        width: 100%;
+    }
+}

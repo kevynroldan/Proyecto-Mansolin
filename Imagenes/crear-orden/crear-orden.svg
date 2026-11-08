@@ -1,0 +1,25 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 48 48"
+    fill="none"
+    stroke="#ffffff"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+>
+    <!-- Documento con esquina doblada -->
+
+    <path d="M27 5H10v38h17" />
+    <path d="M27 5l10 10v8" />
+    <path d="M27 5v10h10" />
+
+    <!-- Líneas del documento -->
+
+    <path d="M16 22h12" />
+    <path d="M16 28h7" />
+
+    <!-- Lápiz -->
+
+    <path d="M24 35l13-13 5 5-13 13-7 2z" />
+    <path d="M34 25l5 5" />
+</svg>

@@ -1,0 +1,23 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 48 48"
+    fill="none"
+    stroke="#ffffff"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+>
+    <!-- Documento con esquina doblada -->
+
+    <path d="M28 5H10v38h28V15z" />
+    <path d="M28 5v10h10" />
+
+    <!-- Símbolo de dinero -->
+
+    <path d="M24 20v18" />
+    <path
+        d="M30 23c-1.5-2-10-3-11 1
+           -1.5 6 12 3 11 9
+           -1 4-9 4-12 1"
+    />
+</svg>

@@ -1,0 +1,25 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 48 48"
+    fill="none"
+    stroke="#ffffff"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+>
+    <!-- Documento con esquina doblada -->
+
+    <path d="M21 42H7V5h23l8 8v9" />
+    <path d="M30 5v8h8" />
+
+    <!-- Líneas de la factura -->
+
+    <path d="M13 19h14" />
+    <path d="M13 25h6" />
+    <path d="M13 31h4" />
+
+    <!-- Lupa -->
+
+    <circle cx="29" cy="31" r="9" />
+    <path d="M35.5 37.5L44 46" />
+</svg>

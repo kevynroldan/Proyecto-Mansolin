@@ -1,0 +1,31 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 48 48"
+    fill="none"
+    stroke="#ffffff"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+>
+    <!-- Llave diagonal -->
+
+    <path
+        d="M29 19
+           A10 10 0 0 1 41 6
+           l-7 7 5 5 7-7
+           A10 10 0 0 1 33 23
+           L15 41
+           a4.2 4.2 0 0 1-6-6
+           Z"
+    />
+
+    <!-- Mango del destornillador -->
+
+    <path d="M8 5l10 10-5 5L3 10z" />
+    <path d="M8 10l5 5" />
+
+    <!-- Eje del destornillador -->
+
+    <path d="M16 17l7 7" />
+    <path d="M29 30l10 10 4 1-1-4-10-10" />
+</svg>

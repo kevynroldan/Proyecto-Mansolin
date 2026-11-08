@@ -1,0 +1,24 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 48 48"
+    fill="none"
+    stroke="#ffffff"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+>
+    <!-- Base de la gráfica -->
+
+    <path d="M5 43h38" />
+
+    <!-- Barras -->
+
+    <path d="M9 37V27h6v10" />
+    <path d="M21 37V20h6v17" />
+    <path d="M33 37V12h6v25" />
+
+    <!-- Línea ascendente -->
+
+    <path d="M7 20l11-10 10 5L41 4" />
+    <path d="M34 4h7v7" />
+</svg>
