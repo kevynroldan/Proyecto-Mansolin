@@ -4,20 +4,10 @@
     box-sizing: border-box;
 }
 
-body {
-    margin: 0;
-    min-height: 100vh;
+:host {
     display: flex;
     flex-direction: column;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #ffffff;
-    color: #183642;
-}
-
-/* Bloquear el desplazamiento mientras el menú está abierto */
-
-body.menu-abierto {
-    overflow: hidden;
+    min-height: 100vh;
 }
 
 button,
@@ -34,7 +24,7 @@ select {
 
 /* Encabezado principal */
 
-body > header {
+#encabezado-principal {
     display: flex;
     align-items: center;
     gap: 24px;
@@ -44,7 +34,7 @@ body > header {
     color: #ffffff;
 }
 
-body > header img {
+#encabezado-principal img {
     display: block;
     width: 68px;
     height: 68px;
@@ -52,7 +42,7 @@ body > header img {
     border-radius: 50%;
 }
 
-body > header h1 {
+#encabezado-principal h1 {
     margin: 0;
     font-size: 28px;
     font-weight: 700;
@@ -498,7 +488,7 @@ main {
 .formulario-validable .entrada-validable select {
     appearance: none;
     padding-right: 90px;
-    background-image: url("Imagenes/flecha-abajo/flecha-abajo.svg");
+    background-image: url("/Imagenes/flecha-abajo/flecha-abajo.svg");
     background-repeat: no-repeat;
     background-position: right 18px center;
     background-size: 16px 16px;
